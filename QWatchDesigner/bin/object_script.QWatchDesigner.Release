@@ -1,0 +1,14 @@
+INPUT(
+./release\main.o
+./release\qwatchdesigner.o
+./release\titlebar.o
+./release\maintitlebar.o
+./release\xmldatamodel.o
+./release\xmlreadwrite.o
+./release\testdemowidget.o
+./release\qrc_res.o
+./release\moc_qwatchdesigner.o
+./release\moc_titlebar.o
+./release\moc_maintitlebar.o
+./release\moc_testdemowidget.o
+);

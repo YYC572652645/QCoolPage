@@ -1,0 +1,63 @@
+﻿QMainWindow
+{
+background-color:#1E1E1E;
+color:white;
+}
+QFrame#frameBorder
+{
+background-color:#1A1A1A;
+color:white;
+}
+
+QLabel
+{
+color:white;
+}
+
+QLineEdit
+{
+background-color:#1A1A1A;
+color:white;
+}
+QTextEdit
+{
+background-color:#1A1A1A;
+color:white;
+}
+
+QPushButton#pushButtonClose
+{
+border-image: url(:/res/res/image/close_normal.svg);
+}
+
+QPushButton#pushButtonClose:hover
+{
+border-image: url(:/res/res/image/close_hover.svg);
+}
+
+QPushButton#pushButtonMin
+{
+border-image: url(:/res/res/image/min_normal.svg);
+}
+
+QPushButton#pushButtonMin:hover
+{
+border-image: url(:/res/res/image/min_hover.svg);
+}
+
+QPushButton#pushButtonSave:hover,#pushButtonAdd:hover
+{
+background-color: rgb(180, 85, 100);
+color:white;
+}
+
+QPushButton#pushButtonSave,#pushButtonAdd
+{
+background-color:rgb(84, 115, 135);
+color:white;
+font-size:12px;
+width: 150px;
+border-radius:2px;
+spacing:2px;
+padding: 0px 0px;
+}
