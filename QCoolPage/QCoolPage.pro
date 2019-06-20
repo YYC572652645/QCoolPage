@@ -13,12 +13,17 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    titlebar/maintitlebar.cpp \
+    titlebar/titlebar.cpp
 
 HEADERS  += mainwindow.h \
-    globaldef.hpp
+    globaldef.hpp \
+    titlebar/maintitlebar.h \
+    titlebar/titlebar.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    titlebar/maintitlebar.ui
 
 RESOURCES += \
     res.qrc
