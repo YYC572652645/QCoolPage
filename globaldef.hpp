@@ -7,14 +7,11 @@
 #ifndef LOADQSS
 #define LOADQSS(qssFile)                        \
 {                                               \
-    QString strQss;                             \
     QFile file(qssFile);                        \
     file.open(QFile::ReadOnly);                 \
     if(file.isOpen())                           \
     {                                           \
-        strQss = QLatin1String(file.readAll()); \
-        qDebug()<<strQss;                       \
-        qApp->setStyleSheet(strQss);            \
+        qApp->setStyleSheet(file.readAll());    \
         file.close();                           \
     }                                           \
 }
@@ -27,10 +24,16 @@
     {                       \
         delete pointer;     \
     }                       \
-    pointer = NULL;         \
+pointer = nullptr;          \
 }
 #endif
 
+enum WidgetTabType
+{
+    TAB_BANNA,
+    TAB_MAX,
+
+};
 namespace GlobalSpace
 {
 const QString BLACK_QSS_FILE_PATH = ":/res/res/stylesheet/black.qss";

@@ -65,7 +65,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Watch Designer</string>
+         <string>QCoolPage</string>
         </property>
         <property name="scaledContents">
          <bool>true</bool>

@@ -16,5 +16,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::initValue()
 {
+    ui->widgetTitle->setParentWidget(this);
     this->setWindowFlags(Qt::FramelessWindowHint);
+    connect(ui->widgetTree, SIGNAL(sendShowIndex(WidgetTabType)), ui->widgetTab, SLOT(receiveShowCurrentTab(WidgetTabType)));
 }
+
+

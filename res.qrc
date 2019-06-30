@@ -10,5 +10,14 @@
         <file>res/image/max_normal.svg</file>
         <file>res/image/normal_hover.svg</file>
         <file>res/image/normal_normal.svg</file>
+        <file>res/image/banna/1.jpg</file>
+        <file>res/image/banna/2.jpg</file>
+        <file>res/image/banna/3.jpg</file>
+        <file>res/image/banna/4.jpg</file>
+        <file>res/image/banna/5.jpg</file>
+        <file>res/image/other/hover_blue.png</file>
+        <file>res/image/other/less_than.png</file>
+        <file>res/image/other/more_than.png</file>
+        <file>res/image/other/normal_gray.png</file>
     </qresource>
 </RCC>

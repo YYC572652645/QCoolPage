@@ -16,10 +16,87 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="MainTitleBar" name="widgetTitle" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="ControlTreeWidget" name="widgetTree" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="ControlTabWidget" name="widgetTab" native="true"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MainTitleBar</class>
+   <extends>QWidget</extends>
+   <header location="global">titlebar\maintitlebar.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ControlTabWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\controltabwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ControlTreeWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\controltreewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

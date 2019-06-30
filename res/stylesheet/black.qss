@@ -132,3 +132,54 @@ QScrollBar::sub-line:vertical
 {
 background:url(none) center no-repeat;
 }
+QTreeWidget, QTabWidget > QWidget
+{
+background:transparent;
+color:white;
+border:none;
+}
+
+QTreeWidget::item:selected:active
+{
+background-color: #123456;
+color:white;
+}
+
+QTreeWidget::item
+{
+height:40px;
+}
+
+
+QTabBar::tab
+{
+min-width:120px;
+color: white;
+background-color:#1F1F1F;
+border: 0px solid;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+padding:6px;
+}
+
+QTabBar::tab:!selected
+{
+margin-top: 5px;
+}
+
+QTabBar::tab:selected
+{
+color: white;
+font-size:14px;
+font-weight:bold;
+border-bottom: 1px solid;
+border-bottom-color:darkred;
+}
+
+QTabWidget::pane
+{
+background-color:transparent;
+}
+*{
+outline:0px;
+}
