@@ -28,9 +28,17 @@
    </property>
    <item>
     <widget class="QTabWidget" name="tabWidgetControl">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
      <widget class="BannaWidget" name="tabBanna">
       <attribute name="title">
        <string>轮播图</string>
+      </attribute>
+     </widget>
+     <widget class="CylinderWidget" name="tabCylinder">
+      <attribute name="title">
+       <string> 柱状图</string>
       </attribute>
      </widget>
     </widget>
@@ -42,6 +50,12 @@
    <class>BannaWidget</class>
    <extends>QWidget</extends>
    <header location="global">maincontent\control\bannawidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CylinderWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\control\cylinderwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

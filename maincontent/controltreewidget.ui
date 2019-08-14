@@ -49,6 +49,11 @@
        <string>轮播图</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>柱状图</string>
+      </property>
+     </item>
     </widget>
    </item>
   </layout>

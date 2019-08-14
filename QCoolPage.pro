@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     titlebar/titlebar.cpp \
     maincontent/controltreewidget.cpp \
     maincontent/controltabwidget.cpp \
-    maincontent/control/bannawidget.cpp
+    maincontent/control/bannawidget.cpp \
+    maincontent/control/cylinderwidget.cpp
 
 HEADERS  += mainwindow.h \
     globaldef.hpp \
@@ -26,13 +27,15 @@ HEADERS  += mainwindow.h \
     titlebar/titlebar.h \
     maincontent/controltreewidget.h \
     maincontent/controltabwidget.h \
-    maincontent/control/bannawidget.h
+    maincontent/control/bannawidget.h \
+    maincontent/control/cylinderwidget.h
 
 FORMS    += mainwindow.ui \
     titlebar/maintitlebar.ui \
     maincontent/controltreewidget.ui \
     maincontent/controltabwidget.ui \
-    maincontent/control/bannawidget.ui
+    maincontent/control/bannawidget.ui \
+    maincontent/control/cylinderwidget.ui
 
 RESOURCES += \
     res.qrc

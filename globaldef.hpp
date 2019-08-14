@@ -31,6 +31,7 @@ pointer = nullptr;          \
 enum WidgetTabType
 {
     TAB_BANNA,
+    TAB_CYLINDER,
     TAB_MAX,
 
 };

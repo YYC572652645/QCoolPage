@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>861</width>
-    <height>436</height>
+    <width>797</width>
+    <height>430</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,7 +46,7 @@ border-radius:6px;
      <widget class="QLabel" name="labelFirst">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>100</y>
         <width>320</width>
         <height>200</height>
@@ -59,7 +59,7 @@ border-radius:6px;
      <widget class="QLabel" name="labelSecond">
       <property name="geometry">
        <rect>
-        <x>90</x>
+        <x>70</x>
         <y>70</y>
         <width>400</width>
         <height>250</height>
@@ -72,7 +72,7 @@ border-radius:6px;
      <widget class="QLabel" name="labelThird">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>150</x>
         <y>50</y>
         <width>480</width>
         <height>300</height>
@@ -85,7 +85,7 @@ border-radius:6px;
      <widget class="QLabel" name="labelFourth">
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>330</x>
         <y>70</y>
         <width>400</width>
         <height>250</height>
@@ -98,7 +98,7 @@ border-radius:6px;
      <widget class="QLabel" name="labelFifth">
       <property name="geometry">
        <rect>
-        <x>510</x>
+        <x>470</x>
         <y>100</y>
         <width>320</width>
         <height>200</height>
@@ -111,7 +111,7 @@ border-radius:6px;
      <widget class="QPushButton" name="pushButtonLeft">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>180</y>
         <width>48</width>
         <height>48</height>
@@ -128,7 +128,7 @@ border-image: url(:/res/res/image/other/less_than.png);</string>
      <widget class="QPushButton" name="pushButtonRight">
       <property name="geometry">
        <rect>
-        <x>780</x>
+        <x>740</x>
         <y>180</y>
         <width>48</width>
         <height>48</height>

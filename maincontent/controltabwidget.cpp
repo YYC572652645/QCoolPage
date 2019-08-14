@@ -32,6 +32,13 @@ void ControlTabWidget::initValue()
         mapTabWidget[TAB_BANNA] = tabWidgetText;
     }
 
+    {
+        TabWidgetData tabWidgetText;
+        tabWidgetText.currentWidget = ui->tabCylinder;
+        tabWidgetText.currentTabText = ui->tabWidgetControl->tabText(TAB_CYLINDER);
+        mapTabWidget[TAB_CYLINDER] = tabWidgetText;
+    }
+
 }
 
 void ControlTabWidget::closeNowTab(int index)
@@ -43,6 +50,8 @@ void ControlTabWidget::receiveShowCurrentTab(WidgetTabType widgetTabType)
 {
     if(widgetTabType >= TAB_MAX) return;
     TabWidgetData tabWidgetData = mapTabWidget.value(widgetTabType);
-    ui->tabWidgetControl->addTab(tabWidgetData.currentWidget, tabWidgetData.currentTabText);
+    if (ui->tabWidgetControl->indexOf(tabWidgetData.currentWidget) < 0) {
+        ui->tabWidgetControl->addTab(tabWidgetData.currentWidget, tabWidgetData.currentTabText);
+    }
     ui->tabWidgetControl->setCurrentWidget(tabWidgetData.currentWidget);
 }

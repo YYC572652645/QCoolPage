@@ -139,7 +139,7 @@ color:white;
 border:none;
 }
 
-QTreeWidget::item:selected:active
+QTreeWidget::item:selected
 {
 background-color: #123456;
 color:white;
@@ -150,6 +150,15 @@ QTreeWidget::item
 height:40px;
 }
 
+QTreeWidget::item:!selected:hover
+{
+background:transparent;
+}
+
+QTreeWidget::branch:selected
+{
+background-color: #123456;
+}
 
 QTabBar::tab
 {
@@ -157,8 +166,6 @@ min-width:120px;
 color: white;
 background-color:#1F1F1F;
 border: 0px solid;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
 padding:6px;
 }
 
@@ -169,6 +176,7 @@ margin-top: 5px;
 
 QTabBar::tab:selected
 {
+background-color:#2F2F2F;
 color: white;
 font-size:14px;
 font-weight:bold;
