@@ -21,18 +21,23 @@ CylinderWidget::~CylinderWidget()
     delete ui;
 }
 
-void CylinderWidget::paintImage(QWidget * widget, float sliderValue, QString text)
+void CylinderWidget::paintImage(QWidget *paintWidget, float sliderValue, QString text)
 {
-    if(NULL == widget) return;
+    if(nullptr == paintWidget) return;
 
-    QPainter painter(widget);
+    QPainter painter(paintWidget);
 
-    float sliderMaxValue = widget->height() * 0.9;
-    float sliderHigh  = -widget->height() * 0.8;  //进度条高度
-    const int sliderWidth = 60;                   //进度条宽度
+    // 进度条最大高度
+    float sliderMaxValue = paintWidget->height() * 0.9;
+
+    //进度条高度
+    float sliderHigh  = -paintWidget->height() * 0.8;
+
+    //进度条宽度
+    const int sliderWidth = 60;
 
     // 将坐标系的该点变成原点坐标
-    painter.translate(widget->width() * 0.3, sliderMaxValue);
+    painter.translate(paintWidget->width() * 0.3, sliderMaxValue);
 
     // 设置画笔为红色
     QPen pen(Qt::white, 2, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
@@ -54,7 +59,7 @@ void CylinderWidget::paintImage(QWidget * widget, float sliderValue, QString tex
     painter.drawLine(0, sliderHigh, sliderWidth, sliderHigh);
 
     // 画进度值
-    painter.drawText(sliderWidth - 40, sliderHigh - 10,tr("%%1").arg(sliderValue * 100));
+    painter.drawText(sliderWidth - 40, sliderHigh - 10, QString("%%1").arg(sliderValue * 100));
     painter.drawText(5, 30, text);
 
 
@@ -77,8 +82,7 @@ void CylinderWidget::paintImage(QWidget * widget, float sliderValue, QString tex
     QBrush brush(linerGradient);
     painter.setBrush(brush);
 
-    painter.drawRect(0, 0, sliderWidth, sliderHigh * sliderValue);
-
+    painter.drawRect(QRectF(0, 0, sliderWidth, sliderHigh * sliderValue));
     painter.end();
 }
 

@@ -29,7 +29,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidgetControl">
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="BannaWidget" name="tabBanna">
       <attribute name="title">
@@ -39,6 +39,11 @@
      <widget class="CylinderWidget" name="tabCylinder">
       <attribute name="title">
        <string> 柱状图</string>
+      </attribute>
+     </widget>
+     <widget class="ProgressWidget" name="tabProgress">
+      <attribute name="title">
+       <string>进度条</string>
       </attribute>
      </widget>
     </widget>
@@ -56,6 +61,12 @@
    <class>CylinderWidget</class>
    <extends>QWidget</extends>
    <header location="global">maincontent\control\cylinderwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ProgressWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\control\progresswidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

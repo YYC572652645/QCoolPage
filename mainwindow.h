@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "systemtray/systemtray.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +18,9 @@ public:
 private:
     Ui::MainWindow *ui;
     void initValue();
+
+private:
+    SystemTray *syetemTray;
 };
 
 #endif // MAINWINDOW_H

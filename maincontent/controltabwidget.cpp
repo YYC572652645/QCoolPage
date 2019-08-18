@@ -26,17 +26,24 @@ void ControlTabWidget::initValue()
     ui->tabWidgetControl->tabBar()->setPalette(palette);
 
     {
-        TabWidgetData tabWidgetText;
-        tabWidgetText.currentWidget = ui->tabBanna;
-        tabWidgetText.currentTabText = ui->tabWidgetControl->tabText(TAB_BANNA);
-        mapTabWidget[TAB_BANNA] = tabWidgetText;
+        TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabBanna;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_BANNA);
+        mapTabWidget[TAB_BANNA] = tabWidgetData;
     }
 
     {
-        TabWidgetData tabWidgetText;
-        tabWidgetText.currentWidget = ui->tabCylinder;
-        tabWidgetText.currentTabText = ui->tabWidgetControl->tabText(TAB_CYLINDER);
-        mapTabWidget[TAB_CYLINDER] = tabWidgetText;
+        TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabCylinder;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_CYLINDER);
+        mapTabWidget[TAB_CYLINDER] = tabWidgetData;
+    }
+
+    {
+        TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabProgress;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_PROGRESS);
+        mapTabWidget[TAB_PROGRESS] = tabWidgetData;
     }
 
 }
@@ -54,4 +61,16 @@ void ControlTabWidget::receiveShowCurrentTab(WidgetTabType widgetTabType)
         ui->tabWidgetControl->addTab(tabWidgetData.currentWidget, tabWidgetData.currentTabText);
     }
     ui->tabWidgetControl->setCurrentWidget(tabWidgetData.currentWidget);
+}
+
+void ControlTabWidget::on_tabWidgetControl_tabBarClicked(int index)
+{
+    for (auto iter = mapTabWidget.begin(); iter != mapTabWidget.end(); iter++)
+    {
+        QWidget *currentWidget = iter.value().currentWidget;
+        if (currentWidget == ui->tabWidgetControl->widget(index))
+        {
+            emit sendShowIndex(iter.key());
+        }
+    }
 }

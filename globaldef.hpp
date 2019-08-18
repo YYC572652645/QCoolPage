@@ -32,11 +32,13 @@ enum WidgetTabType
 {
     TAB_BANNA,
     TAB_CYLINDER,
+    TAB_PROGRESS,
     TAB_MAX,
 
 };
 namespace GlobalSpace
 {
 const QString BLACK_QSS_FILE_PATH = ":/res/res/stylesheet/black.qss";
+const QString LOGO_PATH = ":/res/res/image/image.png";
 }
 #endif // GLOBALDEF_HPP

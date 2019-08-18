@@ -22,11 +22,22 @@ void ControlTreeWidget::initValue()
     ui->treeWidgetMenu->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->treeWidgetMenu->setHeaderHidden(true);
     ui->treeWidgetMenu->header()->setStretchLastSection(true);
-    ui->treeWidgetMenu->topLevelItem(0)->setSelected(true);
+    int lastIndex = ui->treeWidgetMenu->topLevelItemCount() - 1;
+    ui->treeWidgetMenu->topLevelItem(lastIndex)->setSelected(true);
 
 }
 
 void ControlTreeWidget::on_treeWidgetMenu_clicked(const QModelIndex &index)
 {
     emit sendShowIndex(WidgetTabType(index.row()));
+}
+
+void ControlTreeWidget::receiveShowCurrentTab(WidgetTabType widgetTabType)
+{
+    if (widgetTabType < ui->treeWidgetMenu->topLevelItemCount())
+    {
+        QTreeWidgetItem *treeWidgetItem = ui->treeWidgetMenu->topLevelItem(widgetTabType);
+        ui->treeWidgetMenu->clearSelection();
+        treeWidgetItem->setSelected(true);
+    }
 }

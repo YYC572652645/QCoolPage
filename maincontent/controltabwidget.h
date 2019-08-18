@@ -2,6 +2,7 @@
 #define CONTROLTABWIDGET_H
 
 #include <QWidget>
+#include <QTreeWidgetItem>
 #include "globaldef.hpp"
 #include "control/bannawidget.h"
 
@@ -24,9 +25,14 @@ public:
     explicit ControlTabWidget(QWidget *parent = 0);
     ~ControlTabWidget();
 
+signals:
+    void sendShowIndex(WidgetTabType);
+
 private slots:
     void closeNowTab(int index);
     void receiveShowCurrentTab(WidgetTabType widgetTabType);
+    void on_tabWidgetControl_tabBarClicked(int index);
+
 private:
     Ui::ControlTabWidget *ui;
     MapWidget mapTabWidget;

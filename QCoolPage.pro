@@ -19,7 +19,9 @@ SOURCES += main.cpp\
     maincontent/controltreewidget.cpp \
     maincontent/controltabwidget.cpp \
     maincontent/control/bannawidget.cpp \
-    maincontent/control/cylinderwidget.cpp
+    maincontent/control/cylinderwidget.cpp \
+    systemtray/systemtray.cpp \
+    maincontent/control/progresswidget.cpp
 
 HEADERS  += mainwindow.h \
     globaldef.hpp \
@@ -28,14 +30,17 @@ HEADERS  += mainwindow.h \
     maincontent/controltreewidget.h \
     maincontent/controltabwidget.h \
     maincontent/control/bannawidget.h \
-    maincontent/control/cylinderwidget.h
+    maincontent/control/cylinderwidget.h \
+    systemtray/systemtray.h \
+    maincontent/control/progresswidget.h
 
 FORMS    += mainwindow.ui \
     titlebar/maintitlebar.ui \
     maincontent/controltreewidget.ui \
     maincontent/controltabwidget.ui \
     maincontent/control/bannawidget.ui \
-    maincontent/control/cylinderwidget.ui
+    maincontent/control/cylinderwidget.ui \
+    maincontent/control/progresswidget.ui
 
 RESOURCES += \
     res.qrc

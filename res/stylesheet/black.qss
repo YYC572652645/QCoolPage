@@ -3,7 +3,7 @@
 background-color:#1E1E1E;
 color:white;
 }
-QFrame#frameBorder
+QFrame#frameBorder,#frameBackground
 {
 background-color:#1A1A1A;
 color:white;
