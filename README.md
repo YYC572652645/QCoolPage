@@ -6,13 +6,13 @@
 > * 进度条
 
 ## 轮播图示例
-! [text ] ( /mkres/banna.png)
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/banna.png)
 
 ## 柱状图示例
-! [text ] ( /mkres/cylinder.png)
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/cylinder.png)
 
 ## 进度条示例
-! [text ] ( /mkres/slider.png)
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/slider.png)
 
 ## 项目简介
 作者:`灏夏星辰` 
