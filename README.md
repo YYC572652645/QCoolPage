@@ -6,7 +6,7 @@
 > * 进度条
 
 ## 轮播图示例
-![Alt Text](https://github.com/YYC572652645/QCoolPage/blob/master/mkres/banna.gif) 
+<video src="https://github.com/YYC572652645/QCoolPage/blob/master/mkres/banna.mp4" controls="controls" width="100%" height="auto"/>
 
 ## 项目简介
 作者:`灏夏星辰` 
