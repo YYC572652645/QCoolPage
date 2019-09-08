@@ -6,7 +6,7 @@
 > * 进度条
 
 ## 轮播图示例
-<iframe height=500 width=500 src="https://github.com/YYC572652645/QCoolPage/tree/master/mkres/banna.gif">
+![Alt Text](https://github.com/YYC572652645/QCoolPage/blob/master/mkres/banna.gif) 
 
 ## 项目简介
 作者:`灏夏星辰` 
