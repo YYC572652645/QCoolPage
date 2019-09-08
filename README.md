@@ -5,6 +5,8 @@
 > * 柱状图
 > * 进度条
 
+## 轮播图示例
+[foryou]:https://github.com/YYC572652645/QCoolPage/tree/master/mkres/banna.gif
 
 ## 项目简介
 作者:`灏夏星辰` 
