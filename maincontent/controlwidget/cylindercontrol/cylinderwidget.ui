@@ -60,28 +60,36 @@ background-color: #1A1A1A;
        <number>0</number>
       </property>
       <item>
-       <widget class="QWidget" name="widgetFirst" native="true"/>
+       <widget class="CylinderControl" name="widgetFirst" native="true"/>
       </item>
       <item>
-       <widget class="QWidget" name="widgetSecond" native="true"/>
+       <widget class="CylinderControl" name="widgetSecond" native="true"/>
       </item>
       <item>
-       <widget class="QWidget" name="widgetThird" native="true"/>
+       <widget class="CylinderControl" name="widgetThird" native="true"/>
       </item>
       <item>
-       <widget class="QWidget" name="widgetFourth" native="true"/>
+       <widget class="CylinderControl" name="widgetFourth" native="true"/>
       </item>
       <item>
-       <widget class="QWidget" name="widgetFifth" native="true"/>
+       <widget class="CylinderControl" name="widgetFifth" native="true"/>
       </item>
       <item>
-       <widget class="QWidget" name="widgetSixth" native="true"/>
+       <widget class="CylinderControl" name="widgetSixth" native="true"/>
       </item>
      </layout>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CylinderControl</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\controlwidget\cylindercontrol\cylindercontrol.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     maincontent/controlwidget/bannacontrol/bannawidget.cpp \
     maincontent/controlwidget/cylindercontrol/cylinderwidget.cpp \
     maincontent/controlwidget/progresscontrol/progresswidget.cpp \
-    maincontent/controlwidget/progresscontrol/progresscontrol.cpp
+    maincontent/controlwidget/progresscontrol/progresscontrol.cpp \
+    maincontent/controlwidget/cylindercontrol/cylindercontrol.cpp
 
 HEADERS  += mainwindow.h \
     globaldef.hpp \
@@ -34,7 +35,8 @@ HEADERS  += mainwindow.h \
     maincontent/controlwidget/bannacontrol/bannawidget.h \
     maincontent/controlwidget/cylindercontrol/cylinderwidget.h \
     maincontent/controlwidget/progresscontrol/progresswidget.h \
-    maincontent/controlwidget/progresscontrol/progresscontrol.h
+    maincontent/controlwidget/progresscontrol/progresscontrol.h \
+    maincontent/controlwidget/cylindercontrol/cylindercontrol.h
 
 FORMS    += mainwindow.ui \
     titlebar/maintitlebar.ui \
@@ -43,7 +45,8 @@ FORMS    += mainwindow.ui \
     maincontent/controlwidget/bannacontrol/bannawidget.ui \
     maincontent/controlwidget/cylindercontrol/cylinderwidget.ui \
     maincontent/controlwidget/progresscontrol/progresswidget.ui \
-    maincontent/controlwidget/progresscontrol/progresscontrol.ui
+    maincontent/controlwidget/progresscontrol/progresscontrol.ui \
+    maincontent/controlwidget/cylindercontrol/cylindercontrol.ui
 
 RESOURCES += \
     res.qrc

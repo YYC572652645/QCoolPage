@@ -18,8 +18,7 @@ public:
 
 private:
     Ui::CylinderWidget *ui;
-    void paintImage(QWidget * paintWidget, float sliderValue, QString text);
-    bool eventFilter(QObject *watched, QEvent *event) override;
+    void initValue();
 };
 
 #endif // CYLINDERWIDGET_H
