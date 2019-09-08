@@ -38,7 +38,6 @@ void SystemTray::createAction()
     connect(exitSoftWare, SIGNAL(triggered(bool)), qApp, SLOT(quit()));
 
     this->setContextMenu(myMenu);
-
     this->show();
 }
 

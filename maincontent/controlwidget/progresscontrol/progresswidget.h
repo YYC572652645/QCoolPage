@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QPainter>
+#include <QTimer>
 
 namespace Ui {
 class ProgressWidget;
@@ -15,11 +16,13 @@ class ProgressWidget : public QWidget
 public:
     explicit ProgressWidget(QWidget *parent = 0);
     ~ProgressWidget();
-
+private slots:
+    void updateProgress();
 private:
     Ui::ProgressWidget *ui;
-    void paintImage(QWidget *paintWidget, float progressValue, Qt::GlobalColor paintColor = Qt::white);
-    bool eventFilter(QObject *watched, QEvent *event) override;
+    QTimer *myTimer;
+private:
+    void initValue();
 };
 
 #endif // PROGRESSWIDGET_H

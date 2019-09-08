@@ -18,10 +18,11 @@ SOURCES += main.cpp\
     titlebar/titlebar.cpp \
     maincontent/controltreewidget.cpp \
     maincontent/controltabwidget.cpp \
-    maincontent/control/bannawidget.cpp \
-    maincontent/control/cylinderwidget.cpp \
     systemtray/systemtray.cpp \
-    maincontent/control/progresswidget.cpp
+    maincontent/controlwidget/bannacontrol/bannawidget.cpp \
+    maincontent/controlwidget/cylindercontrol/cylinderwidget.cpp \
+    maincontent/controlwidget/progresscontrol/progresswidget.cpp \
+    maincontent/controlwidget/progresscontrol/progresscontrol.cpp
 
 HEADERS  += mainwindow.h \
     globaldef.hpp \
@@ -29,18 +30,20 @@ HEADERS  += mainwindow.h \
     titlebar/titlebar.h \
     maincontent/controltreewidget.h \
     maincontent/controltabwidget.h \
-    maincontent/control/bannawidget.h \
-    maincontent/control/cylinderwidget.h \
     systemtray/systemtray.h \
-    maincontent/control/progresswidget.h
+    maincontent/controlwidget/bannacontrol/bannawidget.h \
+    maincontent/controlwidget/cylindercontrol/cylinderwidget.h \
+    maincontent/controlwidget/progresscontrol/progresswidget.h \
+    maincontent/controlwidget/progresscontrol/progresscontrol.h
 
 FORMS    += mainwindow.ui \
     titlebar/maintitlebar.ui \
     maincontent/controltreewidget.ui \
     maincontent/controltabwidget.ui \
-    maincontent/control/bannawidget.ui \
-    maincontent/control/cylinderwidget.ui \
-    maincontent/control/progresswidget.ui
+    maincontent/controlwidget/bannacontrol/bannawidget.ui \
+    maincontent/controlwidget/cylindercontrol/cylinderwidget.ui \
+    maincontent/controlwidget/progresscontrol/progresswidget.ui \
+    maincontent/controlwidget/progresscontrol/progresscontrol.ui
 
 RESOURCES += \
     res.qrc

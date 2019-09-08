@@ -29,7 +29,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidgetControl">
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="BannaWidget" name="tabBanna">
       <attribute name="title">
@@ -54,19 +54,19 @@
   <customwidget>
    <class>BannaWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\control\bannawidget.h</header>
+   <header location="global">maincontent\controlwidget\bannacontrol\bannawidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>CylinderWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\control\cylinderwidget.h</header>
+   <header location="global">maincontent\controlwidget\cylindercontrol\cylinderwidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>ProgressWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\control\progresswidget.h</header>
+   <header location="global">maincontent\controlwidget\progresscontrol\progresswidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
