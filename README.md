@@ -6,7 +6,13 @@
 > * 进度条
 
 ## 轮播图示例
-<video src="https://github.com/YYC572652645/QCoolPage/blob/master/mkres/banna.mp4" controls="controls" width="100%" height="auto"/>
+! [text ] ( /mkres/banna.png)
+
+## 柱状图示例
+! [text ] ( /mkres/cylinder.png)
+
+## 进度条示例
+! [text ] ( /mkres/slider.png)
 
 ## 项目简介
 作者:`灏夏星辰` 
