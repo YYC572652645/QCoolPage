@@ -19,12 +19,10 @@ public:
 private slots:
     void on_pushButtonClose_clicked();
     void on_pushButtonMin_clicked();
-    void on_pushButtonMax_clicked();
-    void on_pushButtonNormal_clicked();
+    void on_pushButtonNormalMax_clicked();
 
 private:
     Ui::MainTitleBar *ui;
-    void showNormalMax();
 };
 
 #endif // MAINTITLEBAR_H

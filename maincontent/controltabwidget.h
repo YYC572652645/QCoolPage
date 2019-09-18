@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QTreeWidgetItem>
 #include "globaldef.hpp"
-#include "controlwidget/bannacontrol/bannawidget.h"
+#include "controlwidget/bannacontrol/bannacontrol.h"
 
 namespace Ui {
 class ControlTabWidget;

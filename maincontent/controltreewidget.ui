@@ -59,6 +59,11 @@
        <string>进度条</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>面板</string>
+      </property>
+     </item>
     </widget>
    </item>
   </layout>

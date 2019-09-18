@@ -6,8 +6,8 @@ MainTitleBar::MainTitleBar(QWidget *parent) :
     ui(new Ui::MainTitleBar)
 {
     ui->setupUi(this);
-    ui->widgetNormalMax->hide();
-    ui->pushButtonMax->hide();
+    ui->pushButtonNormalMax->setStyleSheet("QPushButton{border-image: url(:/res/res/image/normal_normal.svg);}"
+                                           "QPushButton:hover{border-image: url(:/res/res/image/normal_hover.svg);}");
 }
 
 MainTitleBar::~MainTitleBar()
@@ -31,32 +31,20 @@ void MainTitleBar::on_pushButtonMin_clicked()
     }
 }
 
-void MainTitleBar::showNormalMax()
-{
-    if(parentWidget->windowState() != Qt::WindowMaximized)
-    {
-        parentWidget->showMaximized();
-        ui->pushButtonMax->show();
-        ui->pushButtonNormal->hide();
 
+void MainTitleBar::on_pushButtonNormalMax_clicked()
+{
+    if(parentWidget == nullptr) return;
+    if (parentWidget->isMaximized())
+    {
+        parentWidget->showNormal();
+        ui->pushButtonNormalMax->setStyleSheet("QPushButton{border-image: url(:/res/res/image/normal_normal.svg);}"
+                                               "QPushButton:hover{border-image: url(:/res/res/image/normal_hover.svg);}");
     }
     else
     {
-        parentWidget->showNormal();
-        ui->pushButtonMax->hide();
-        ui->pushButtonNormal->show();
+        parentWidget->showMaximized();
+        ui->pushButtonNormalMax->setStyleSheet("QPushButton{border-image: url(:/res/res/image/max_normal.svg);}"
+                                               "QPushButton:hover{border-image: url(:/res/res/image/max_hover.svg);}");
     }
-
-    ui->pushButtonMax->repaint();
-    ui->pushButtonNormal->repaint();
-}
-
-void MainTitleBar::on_pushButtonMax_clicked()
-{
-    this->showNormalMax();
-}
-
-void MainTitleBar::on_pushButtonNormal_clicked()
-{
-    this->showNormalMax();
 }

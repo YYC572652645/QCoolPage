@@ -46,6 +46,13 @@ void ControlTabWidget::initValue()
         mapTabWidget[TAB_PROGRESS] = tabWidgetData;
     }
 
+    {
+        TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabFrame;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_FRAME);
+        mapTabWidget[TAB_FRAME] = tabWidgetData;
+    }
+
 }
 
 void ControlTabWidget::closeNowTab(int index)

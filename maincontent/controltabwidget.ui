@@ -29,7 +29,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidgetControl">
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="BannaWidget" name="tabBanna">
       <attribute name="title">
@@ -44,6 +44,11 @@
      <widget class="ProgressWidget" name="tabProgress">
       <attribute name="title">
        <string>进度条</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tabFrame">
+      <attribute name="title">
+       <string>面板</string>
       </attribute>
      </widget>
     </widget>

@@ -22,8 +22,7 @@ void ControlTreeWidget::initValue()
     ui->treeWidgetMenu->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->treeWidgetMenu->setHeaderHidden(true);
     ui->treeWidgetMenu->header()->setStretchLastSection(true);
-    int lastIndex = ui->treeWidgetMenu->topLevelItemCount() - 1;
-    ui->treeWidgetMenu->topLevelItem(lastIndex)->setSelected(true);
+    ui->treeWidgetMenu->topLevelItem(0)->setSelected(true);
 
 }
 
