@@ -54,7 +54,6 @@ FORMS    += mainwindow.ui \
     maincontent/controlwidget/progresscontrol/progresswidget.ui \
     maincontent/controlwidget/progresscontrol/progresscontrol.ui \
     maincontent/controlwidget/cylindercontrol/cylindercontrol.ui \
-    maincontent/controlwidget/framecontrol/framecontrol.ui \
     maincontent/controlwidget/framecontrol/framewidget.ui \
     maincontent/controlwidget/bannacontrol/bannacontrol.ui \
     maincontent/controlwidget/bannacontrol/bannawidget.ui

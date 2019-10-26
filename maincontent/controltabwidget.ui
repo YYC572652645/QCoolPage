@@ -29,7 +29,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidgetControl">
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="BannaWidget" name="tabBanna">
       <attribute name="title">
@@ -46,7 +46,7 @@
        <string>进度条</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tabFrame">
+     <widget class="FrameWidget" name="tabFrame">
       <attribute name="title">
        <string>面板</string>
       </attribute>
@@ -74,7 +74,16 @@
    <header location="global">maincontent\controlwidget\progresscontrol\progresswidget.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>FrameWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\controlwidget\framecontrol\framewidget.h</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>tabWidgetControl</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

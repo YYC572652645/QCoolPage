@@ -1,7 +1,9 @@
-#ifndef FRAMEWIDGET_H
+﻿#ifndef FRAMEWIDGET_H
 #define FRAMEWIDGET_H
 
 #include <QWidget>
+
+class FlowLayout;
 
 namespace Ui {
 class FrameWidget;
@@ -17,6 +19,11 @@ public:
 
 private:
     Ui::FrameWidget *ui;
+    FlowLayout *flowLayout;
+private:
+    const QString IMAGE_PATH = ":/res/res/image/image.png";
+private:
+    void initValue();
 };
 
 #endif // FRAMEWIDGET_H

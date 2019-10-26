@@ -191,3 +191,12 @@ background-color:transparent;
 *{
 outline:0px;
 }
+
+QFrame#frameApplication {
+border:1px solid #BBBBBB;
+border-radius:5px;
+}
+QFrame#frameApplication:hover {
+border:1px solid #FFFFFF;
+border-radius:5px;
+}
