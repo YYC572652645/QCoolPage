@@ -53,6 +53,13 @@ void ControlTabWidget::initValue()
         mapTabWidget[TAB_FRAME] = tabWidgetData;
     }
 
+    {
+        TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabPlot;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_CUSTOM_PLOT);
+        mapTabWidget[TAB_CUSTOM_PLOT] = tabWidgetData;
+    }
+
 }
 
 void ControlTabWidget::closeNowTab(int index)

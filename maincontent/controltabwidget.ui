@@ -51,6 +51,11 @@
        <string>面板</string>
       </attribute>
      </widget>
+     <widget class="PlotWidget" name="tabPlot">
+      <attribute name="title">
+       <string> 坐标系</string>
+      </attribute>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -78,6 +83,12 @@
    <class>FrameWidget</class>
    <extends>QWidget</extends>
    <header location="global">maincontent\controlwidget\framecontrol\framewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\controlwidget\plotcontrol\plotwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

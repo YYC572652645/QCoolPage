@@ -34,6 +34,7 @@ enum WidgetTabType
     TAB_CYLINDER,
     TAB_PROGRESS,
     TAB_FRAME,
+    TAB_CUSTOM_PLOT,
     TAB_MAX,
 
 };
