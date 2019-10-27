@@ -5,6 +5,7 @@
 > * 柱状图
 > * 进度条
 > * 面板
+> * 坐标系
 
 ## 轮播图示例
 ![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/banna.png)
@@ -17,6 +18,9 @@
 
 ## 面板示例
 ![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/frame.png)
+
+## 坐标系示例
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/plot.png)
 
 ## 项目简介
 作者:`灏夏星辰` 
