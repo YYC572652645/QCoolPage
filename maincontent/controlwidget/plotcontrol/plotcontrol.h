@@ -25,16 +25,24 @@ class PlotControl : public QWidget
 {
     Q_OBJECT
 
+    enum PointType {
+        DATA_POINT = 0,
+        SMALL_POINT,
+        BIG_POINT,
+    };
+
 public:
     explicit PlotControl(QWidget *parent = 0);
     ~PlotControl();
     void setControlData(const CoorData &coorData);
-
 private:
     Ui::PlotControl *ui;
-    const int ONE_DAY = 24 * 3600;
+    CoorData pointData;
+
 private:
     void initValue();
+    bool eventFilter(QObject *watched, QEvent *event) override;
+    QPoint matchPoint(QPoint point);
 };
 
 #endif // PLOTCONTROL_H

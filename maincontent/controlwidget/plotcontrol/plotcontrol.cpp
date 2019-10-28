@@ -1,5 +1,6 @@
 ﻿#include "plotcontrol.h"
 #include "ui_plotcontrol.h"
+#include <QDebug>
 
 PlotControl::PlotControl(QWidget *parent) :
     QWidget(parent),
@@ -38,31 +39,95 @@ void PlotControl::initValue()
     ui->widgetCustomPlot->xAxis->setRange(0, 10);
     ui->widgetCustomPlot->yAxis->setRange(0, 10);
 
-    //第一个图
-    ui->widgetCustomPlot->addGraph();
-
     //设置画笔
     QPen paintPen;
     paintPen.setColor(LIN_COLOR);
-    ui->widgetCustomPlot->graph(0)->setPen(paintPen);
-    ui->widgetCustomPlot->graph(0)->setLineStyle(QCPGraph::LineStyle::lsLine);
+    ui->widgetCustomPlot->addGraph();
+    ui->widgetCustomPlot->graph(DATA_POINT)->setPen(paintPen);
+    ui->widgetCustomPlot->graph(DATA_POINT)->setLineStyle(QCPGraph::LineStyle::lsLine);
 
     //设置第一个点
     ui->widgetCustomPlot->addGraph();
-    ui->widgetCustomPlot->graph(1)->setPen(QPen(Qt::darkRed));
-    ui->widgetCustomPlot->graph(1)->setLineStyle(QCPGraph::lsNone);
-    ui->widgetCustomPlot->graph(1)->setScatterStyle(QCPScatterStyle::ssDisc);
+    ui->widgetCustomPlot->graph(SMALL_POINT)->setPen(QPen(Qt::darkRed));
+    ui->widgetCustomPlot->graph(SMALL_POINT)->setLineStyle(QCPGraph::lsNone);
+    ui->widgetCustomPlot->graph(SMALL_POINT)->setScatterStyle(QCPScatterStyle::ssDisc);
 
     //设置第二个点
     ui->widgetCustomPlot->addGraph();
-    ui->widgetCustomPlot->graph(2)->setPen(QPen(Qt::darkRed));
-    ui->widgetCustomPlot->graph(2)->setLineStyle(QCPGraph::lsNone);
-    ui->widgetCustomPlot->graph(2)->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssDisc, 12));
+    ui->widgetCustomPlot->graph(BIG_POINT)->setPen(QPen(Qt::darkRed));
+    ui->widgetCustomPlot->graph(BIG_POINT)->setLineStyle(QCPGraph::lsNone);
+    ui->widgetCustomPlot->graph(BIG_POINT)->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssDisc, 12));
+
+    // 注册监听事件
+    ui->widgetCustomPlot->installEventFilter(this);
 }
 
 void PlotControl::setControlData(const CoorData &coorData)
 {
-    ui->widgetCustomPlot->graph(0)->setData(coorData.dataX, coorData.dataY);
-    ui->widgetCustomPlot->graph(1)->setData(coorData.dataX, coorData.dataY);
+    pointData = coorData;
+    ui->widgetCustomPlot->graph(DATA_POINT)->setData(coorData.dataX, coorData.dataY);
+    ui->widgetCustomPlot->graph(SMALL_POINT)->setData(coorData.dataX, coorData.dataY);
     ui->widgetCustomPlot->replot();
+}
+
+
+/*********************     鼠标移动    ********************/
+bool PlotControl::eventFilter(QObject *watched, QEvent *event)
+{
+    if(watched == ui->widgetCustomPlot && event->type() == QEvent::MouseMove) {
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
+        int xPos = mouseEvent->pos().x();
+        int yPos = mouseEvent->pos().y();
+
+        float xValue = ui->widgetCustomPlot->xAxis->pixelToCoord(xPos);
+        float yValue = ui->widgetCustomPlot->yAxis->pixelToCoord(yPos);
+
+        QPoint pointMatch = matchPoint(QPoint(xValue, yValue));
+
+        CoorData bigPointData;
+        bigPointData.dataX.append(pointMatch.x());
+        bigPointData.dataY.append(pointMatch.y());
+
+        ui->widgetCustomPlot->graph(BIG_POINT)->setData(bigPointData.dataX, bigPointData.dataY);
+        ui->widgetCustomPlot->replot();
+    }
+
+    return QWidget::eventFilter(watched, event);
+}
+
+
+QPoint PlotControl::matchPoint(QPoint point)
+{
+    /******************************************
+     * 思路：
+     * 鼠标当前的点与实际坐标相比较，
+     * 离哪个点比较近，返回当前比较近的点的坐标
+     * *****************************************/
+
+    QList<QPoint> pointList;
+    QList<float> compareompareList;
+    for(int i = 0; i < pointData.dataX.size(); i ++) {
+        float diffValue = point.x() - pointData.dataX.at(i);
+        if(diffValue > -1 && diffValue < 1) {
+            pointList.append(QPoint(pointData.dataX.at(i), pointData.dataY.at(i)));
+
+            compareompareList.append(std::abs(pointData.dataX.at(i) - point.x()));
+        }
+    }
+
+    if(compareompareList.size() != 0) {
+        int minIndex = 0;
+        float minValue = compareompareList.at(0);
+        for(int i = 0; i < compareompareList.size(); i ++) {
+            if(compareompareList.at(i) < minValue) {
+                minValue = compareompareList.at(i);
+                minIndex = i;
+            }
+        }
+        if (minIndex < pointList.size()) {
+            return pointList.at(minIndex);
+        }
+    }
+
+    return QPoint(0, 0);
 }
