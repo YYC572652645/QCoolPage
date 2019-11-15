@@ -69,6 +69,11 @@
        <string>坐标系</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>移动按钮</string>
+      </property>
+     </item>
     </widget>
    </item>
   </layout>

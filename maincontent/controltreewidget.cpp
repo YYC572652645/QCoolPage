@@ -23,7 +23,7 @@ void ControlTreeWidget::initValue()
     ui->treeWidgetMenu->setHeaderHidden(true);
     ui->treeWidgetMenu->header()->setStretchLastSection(true);
     ui->treeWidgetMenu->topLevelItem(0)->setSelected(true);
-
+    ui->treeWidgetMenu->setFocusPolicy(Qt::NoFocus);
 }
 
 void ControlTreeWidget::on_treeWidgetMenu_clicked(const QModelIndex &index)

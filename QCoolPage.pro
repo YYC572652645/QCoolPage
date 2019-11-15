@@ -30,7 +30,9 @@ SOURCES += main.cpp\
     maincontent/controlwidget/bannacontrol/bannawidget.cpp \
     qcustomplot/qcustomplot.cpp \
     maincontent/controlwidget/plotcontrol/plotwidget.cpp \
-    maincontent/controlwidget/plotcontrol/plotcontrol.cpp
+    maincontent/controlwidget/plotcontrol/plotcontrol.cpp \
+    maincontent/controlwidget/movecontrol/movecontrol.cpp \
+    maincontent/controlwidget/movecontrol/movewidget.cpp
 
 HEADERS  += mainwindow.h \
     globaldef.hpp \
@@ -50,7 +52,9 @@ HEADERS  += mainwindow.h \
     maincontent/controlwidget/bannacontrol/bannawidget.h \
     qcustomplot/qcustomplot.h \
     maincontent/controlwidget/plotcontrol/plotwidget.h \
-    maincontent/controlwidget/plotcontrol/plotcontrol.h
+    maincontent/controlwidget/plotcontrol/plotcontrol.h \
+    maincontent/controlwidget/movecontrol/movecontrol.h \
+    maincontent/controlwidget/movecontrol/movewidget.h
 
 FORMS    += mainwindow.ui \
     titlebar/maintitlebar.ui \
@@ -64,7 +68,9 @@ FORMS    += mainwindow.ui \
     maincontent/controlwidget/bannacontrol/bannacontrol.ui \
     maincontent/controlwidget/bannacontrol/bannawidget.ui \
     maincontent/controlwidget/plotcontrol/plotwidget.ui \
-    maincontent/controlwidget/plotcontrol/plotcontrol.ui
+    maincontent/controlwidget/plotcontrol/plotcontrol.ui \
+    maincontent/controlwidget/movecontrol/movecontrol.ui \
+    maincontent/controlwidget/movecontrol/movewidget.ui
 
 RESOURCES += \
     res.qrc

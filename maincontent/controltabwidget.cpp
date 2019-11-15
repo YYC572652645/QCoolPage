@@ -60,6 +60,13 @@ void ControlTabWidget::initValue()
         mapTabWidget[TAB_CUSTOM_PLOT] = tabWidgetData;
     }
 
+    {
+        TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabMoveButton;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_MOVE_BUTTON);
+        mapTabWidget[TAB_MOVE_BUTTON] = tabWidgetData;
+    }
+
 }
 
 void ControlTabWidget::closeNowTab(int index)

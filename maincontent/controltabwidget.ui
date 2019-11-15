@@ -56,6 +56,11 @@
        <string> 坐标系</string>
       </attribute>
      </widget>
+     <widget class="MoveWidget" name="tabMoveButton">
+      <attribute name="title">
+       <string>可移动按钮</string>
+      </attribute>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -89,6 +94,12 @@
    <class>PlotWidget</class>
    <extends>QWidget</extends>
    <header location="global">maincontent\controlwidget\plotcontrol\plotwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MoveWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\controlwidget\movecontrol\movewidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

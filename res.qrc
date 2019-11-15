@@ -19,5 +19,7 @@
         <file>res/image/other/less_than.png</file>
         <file>res/image/other/more_than.png</file>
         <file>res/image/other/normal_gray.png</file>
+        <file>res/image/other/circle.png</file>
+        <file>res/image/other/close.png</file>
     </qresource>
 </RCC>

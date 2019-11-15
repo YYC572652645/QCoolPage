@@ -6,6 +6,7 @@
 > * 进度条
 > * 面板
 > * 坐标系
+> * 可移动按钮
 
 ## 轮播图示例
 ![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/banna.png)
@@ -22,8 +23,11 @@
 ## 坐标系示例
 ![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/plot.png)
 
+## 可移动按钮
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/movebutton.png)
+
 ## 项目简介
 作者:`灏夏星辰` 
-2019年10月27日  
+2019年11月15日  
 持续更新中...
 
