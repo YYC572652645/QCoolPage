@@ -71,7 +71,7 @@
      </item>
      <item>
       <property name="text">
-       <string>移动按钮</string>
+       <string>可移动按钮</string>
       </property>
      </item>
     </widget>

@@ -1,6 +1,7 @@
 ﻿#include "controltabwidget.h"
 #include "ui_controltabwidget.h"
 
+/******************   构造函数     *********************/
 ControlTabWidget::ControlTabWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ControlTabWidget)
@@ -9,11 +10,13 @@ ControlTabWidget::ControlTabWidget(QWidget *parent) :
     this->initValue();
 }
 
+/******************   析构函数     *********************/
 ControlTabWidget::~ControlTabWidget()
 {
     delete ui;
 }
 
+/******************   初始化数据     *********************/
 void ControlTabWidget::initValue()
 {
     ui->tabWidgetControl->setTabsClosable(true);
@@ -69,11 +72,13 @@ void ControlTabWidget::initValue()
 
 }
 
+/******************   关闭当前页     *********************/
 void ControlTabWidget::closeNowTab(int index)
 {
     ui->tabWidgetControl->removeTab(index);
 }
 
+/******************   点击树形项显示对应Tab页     *********************/
 void ControlTabWidget::receiveShowCurrentTab(WidgetTabType widgetTabType)
 {
     if(widgetTabType >= TAB_MAX) return;
@@ -84,6 +89,7 @@ void ControlTabWidget::receiveShowCurrentTab(WidgetTabType widgetTabType)
     ui->tabWidgetControl->setCurrentWidget(tabWidgetData.currentWidget);
 }
 
+/******************   点击Tab页显示对应树形项     *********************/
 void ControlTabWidget::on_tabWidgetControl_tabBarClicked(int index)
 {
     for (auto iter = mapTabWidget.begin(); iter != mapTabWidget.end(); iter++)

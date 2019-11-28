@@ -160,6 +160,13 @@ int BannaControl::getMaxGeometryIndex(const QList<BannaData> &listData)
 
 void BannaControl::sortGeometry(const bool &isNextFlage)
 {
+    /******************************************
+     * 思路：
+     * 将五张图片进行排序，根据其移动后的位置
+     * 来确定哪个图层在上，哪个图层在下
+     * lower函数 将图层沉下去
+     * raise函数 将图层浮上来
+     * *****************************************/
     QList<BannaData>listData = bannaDataList;
     QLabel *topImageLabel = nullptr;
     int countNumber = 0;
