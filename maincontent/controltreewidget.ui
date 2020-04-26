@@ -74,6 +74,11 @@
        <string>可移动按钮</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>表格</string>
+      </property>
+     </item>
     </widget>
    </item>
   </layout>

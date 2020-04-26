@@ -9,25 +9,28 @@
 > * 可移动按钮
 
 ## 轮播图示例
-![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/banna.png)
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/1.png)
 
 ## 柱状图示例
-![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/cylinder.png)
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/2.png)
 
 ## 进度条示例
-![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/slider.png)
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/3.png)
 
 ## 面板示例
-![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/frame.png)
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/4.png)
 
 ## 坐标系示例
-![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/plot.png)
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/5.png)
 
 ## 可移动按钮
-![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/movebutton.png)
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/6.png)
+
+## 表格
+![](https://github.com/YYC572652645/QCoolPage/raw/master/mkres/7.png)
 
 ## 项目简介
 作者:`灏夏星辰` 
-2019年11月15日  
+2020年04月26日  
 持续更新中...
 

@@ -36,6 +36,7 @@ enum WidgetTabType
     TAB_FRAME,
     TAB_CUSTOM_PLOT,
     TAB_MOVE_BUTTON,
+    TAB_TABLE_WIDGET,
     TAB_MAX,
 
 };

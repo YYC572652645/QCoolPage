@@ -70,6 +70,13 @@ void ControlTabWidget::initValue()
         mapTabWidget[TAB_MOVE_BUTTON] = tabWidgetData;
     }
 
+    {
+        TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabTableWidget;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_TABLE_WIDGET);
+        mapTabWidget[TAB_TABLE_WIDGET] = tabWidgetData;
+    }
+
 }
 
 /******************   关闭当前页     *********************/

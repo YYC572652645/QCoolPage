@@ -200,3 +200,57 @@ QFrame#frameApplication:hover {
 border:1px solid #FFFFFF;
 border-radius:5px;
 }
+
+
+/********************** TableWidget Style Sheet  *******************/
+QFrame#frameTable
+{
+background-color:#194F62;
+}
+
+QLabel#labelTableText
+{
+font-family: Microsoft YaHei;
+font-size: 18px;
+color: #FFFFFF;
+}
+
+QHeaderView
+{
+background-color:transparent;
+}
+
+QHeaderView::section
+{
+border: none;
+background-color: #2B2B2B;
+font-family: Microsoft YaHei;
+font-size: 12px;
+color: #FFFFFF;
+text-align: center;
+min-height: 36px;
+max-height: 36px;
+}
+
+QTableWidget
+{
+border:0px solid;
+border-top-width:1px;
+border-top-style:solid;
+border-top-color:#5C8290;
+background-color:transparent;
+alternate-background-color: #2A2A2A;
+}
+
+QTableWidget::item
+{
+font-family: PingFangSC-Regular;
+font-size: 10px;
+min-height: 36px;
+max-height: 36px;
+}
+
+QTableWidget::item:selected
+{
+out-line:none;
+}

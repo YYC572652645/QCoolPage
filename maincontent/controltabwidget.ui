@@ -61,6 +61,11 @@
        <string>可移动按钮</string>
       </attribute>
      </widget>
+     <widget class="TableWidget" name="tabTableWidget">
+      <attribute name="title">
+       <string> 表格</string>
+      </attribute>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -100,6 +105,12 @@
    <class>MoveWidget</class>
    <extends>QWidget</extends>
    <header location="global">maincontent\controlwidget\movecontrol\movewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TableWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\controlwidget\tablecontrol\tablewidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
