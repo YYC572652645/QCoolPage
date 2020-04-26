@@ -1,5 +1,4 @@
 ﻿#include "framecontrol.h"
-#include "ui_framecontrol.h"
 #include <QFrame>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
