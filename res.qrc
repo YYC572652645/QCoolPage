@@ -21,5 +21,12 @@
         <file>res/image/other/normal_gray.png</file>
         <file>res/image/other/circle.png</file>
         <file>res/image/other/close.png</file>
+        <file>res/image/other/center_cyan.png</file>
+        <file>res/image/left_arrow_hover.png</file>
+        <file>res/image/left_arrow_normal.png</file>
+        <file>res/image/left_arrow_pressed.png</file>
+        <file>res/image/right_arrow_hover.png</file>
+        <file>res/image/right_arrow_normal.png</file>
+        <file>res/image/right_arrow_pressed.png</file>
     </qresource>
 </RCC>

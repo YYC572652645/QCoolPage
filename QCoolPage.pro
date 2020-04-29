@@ -13,6 +13,7 @@ TEMPLATE = app
 
 MOC_DIR = $$OUT_PWD/mocfile
 OBJECTS_DIR = $$OUT_PWD/objfile
+UI_DIR = $$OUT_PWD/uifile
 
 
 SOURCES += main.cpp\
@@ -37,7 +38,10 @@ SOURCES += main.cpp\
     maincontent/controlwidget/movecontrol/movecontrol.cpp \
     maincontent/controlwidget/movecontrol/movewidget.cpp \
     maincontent/controlwidget/tablecontrol/tablecontrol.cpp \
-    maincontent/controlwidget/tablecontrol/tablewidget.cpp
+    maincontent/controlwidget/tablecontrol/tablewidget.cpp \
+    numberanimation/numberanimation.cpp \
+    maincontent/controlwidget/slidercontrol/slidercontrol.cpp \
+    maincontent/controlwidget/slidercontrol/sliderwidget.cpp
 
 HEADERS  += mainwindow.h \
     globaldef.hpp \
@@ -61,7 +65,10 @@ HEADERS  += mainwindow.h \
     maincontent/controlwidget/movecontrol/movecontrol.h \
     maincontent/controlwidget/movecontrol/movewidget.h \
     maincontent/controlwidget/tablecontrol/tablecontrol.h \
-    maincontent/controlwidget/tablecontrol/tablewidget.h
+    maincontent/controlwidget/tablecontrol/tablewidget.h \
+    numberanimation/numberanimation.h \
+    maincontent/controlwidget/slidercontrol/slidercontrol.h \
+    maincontent/controlwidget/slidercontrol/sliderwidget.h
 
 FORMS    += mainwindow.ui \
     titlebar/maintitlebar.ui \
@@ -79,7 +86,9 @@ FORMS    += mainwindow.ui \
     maincontent/controlwidget/movecontrol/movecontrol.ui \
     maincontent/controlwidget/movecontrol/movewidget.ui \
     maincontent/controlwidget/tablecontrol/tablecontrol.ui \
-    maincontent/controlwidget/tablecontrol/tablewidget.ui
+    maincontent/controlwidget/tablecontrol/tablewidget.ui \
+    maincontent/controlwidget/slidercontrol/slidercontrol.ui \
+    maincontent/controlwidget/slidercontrol/sliderwidget.ui
 
 RESOURCES += \
     res.qrc

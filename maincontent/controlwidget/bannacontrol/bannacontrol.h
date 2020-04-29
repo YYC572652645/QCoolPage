@@ -44,7 +44,7 @@ typedef struct BannaData
     QLabel *nextImageLabel;
     QLabel *preImageLabel;
     QPropertyAnimation *proAnimation;
-}BannaData;
+} BannaData;
 
 class BannaControl : public QWidget
 {

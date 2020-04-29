@@ -56,7 +56,7 @@ void ProgressControl::paintEvent(QPaintEvent *paintEvent)
     const int offsetValue = 70;
     const int startDrawX = widgetWidth * 0.1;
     const int startDrawY = widgetHeight * 0.4;
-    painter.drawRoundedRect(startDrawX, startDrawY, (widgetWidth- offsetValue * 2), progressHeight, xRadius, yRadius);
+    painter.drawRoundedRect(startDrawX, startDrawY, (widgetWidth - offsetValue * 2), progressHeight, xRadius, yRadius);
 
     //进度
     painterPen.setColor(Qt::white);

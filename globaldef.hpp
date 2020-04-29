@@ -37,6 +37,7 @@ enum WidgetTabType
     TAB_CUSTOM_PLOT,
     TAB_MOVE_BUTTON,
     TAB_TABLE_WIDGET,
+    TAB_SLIDER,
     TAB_MAX,
 
 };
@@ -44,5 +45,41 @@ namespace GlobalSpace
 {
 const QString BLACK_QSS_FILE_PATH = ":/res/res/stylesheet/black.qss";
 const QString LOGO_PATH = ":/res/res/image/image.png";
+
+const int INT_DOUBLE_TIMES = 2;
+const float FLOAT_DOUBLE_TIMES = 2.0f;
+
+// 根据控件位置获取控件中心点位置
+inline QPoint GetCenterPosition(const QWidget *controlWidget)
+{
+    QPoint centerPos;
+    if(nullptr != controlWidget)
+    {
+        centerPos.setX(controlWidget->x() + controlWidget->width() / INT_DOUBLE_TIMES);
+        centerPos.setY(controlWidget->y() + controlWidget->height() / INT_DOUBLE_TIMES);
+    }
+    return centerPos;
+}
+
+// 获取控件中心点位置
+inline QPointF GetCenterPoint(const QWidget *controlWidget)
+{
+    QPointF centerPoint;
+    if(nullptr != controlWidget)
+    {
+        centerPoint.setX(controlWidget->width() / 2.0);
+        centerPoint.setY(controlWidget->height() / 2.0);
+    }
+    return centerPoint;
+}
+
+// 获取图片中心点位置
+inline QPointF GetCenterPoint(const QImage &image)
+{
+    QPointF centerPoint;
+    centerPoint.setX(image.width() / 2.0);
+    centerPoint.setY(image.height() / 2.0);
+    return centerPoint;
+}
 }
 #endif // GLOBALDEF_HPP

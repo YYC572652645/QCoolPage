@@ -43,7 +43,7 @@ void CylinderControl::paintEvent(QPaintEvent *paintEvent)
     QPen pen(Qt::white, 2, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
     painter.setPen(pen);
 
-    // 画上面直线线
+    // 画上面直线
     painter.drawLine(0, sliderHigh, sliderWidth, sliderHigh);
 
     // 画下面直线

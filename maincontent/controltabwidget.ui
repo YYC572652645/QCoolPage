@@ -58,12 +58,17 @@
      </widget>
      <widget class="MoveWidget" name="tabMoveButton">
       <attribute name="title">
-       <string>可移动按钮</string>
+       <string>移动按钮</string>
       </attribute>
      </widget>
      <widget class="TableWidget" name="tabTableWidget">
       <attribute name="title">
        <string> 表格</string>
+      </attribute>
+     </widget>
+     <widget class="SliderWidget" name="tabSlider">
+      <attribute name="title">
+       <string>移动进度</string>
       </attribute>
      </widget>
     </widget>
@@ -111,6 +116,12 @@
    <class>TableWidget</class>
    <extends>QWidget</extends>
    <header location="global">maincontent\controlwidget\tablecontrol\tablewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SliderWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\controlwidget\slidercontrol\sliderwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

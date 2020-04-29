@@ -8,9 +8,9 @@ int main(int argc, char *argv[])
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication a(argc, argv);
 
-    MainWindow w;
+    MainWindow mainwindow;
     LOADQSS(GlobalSpace::BLACK_QSS_FILE_PATH);
-    w.show();
+    mainwindow.showNormal();
 
     return a.exec();
 }

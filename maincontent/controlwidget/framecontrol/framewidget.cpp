@@ -20,7 +20,8 @@ void FrameWidget::initValue()
 {
     flowLayout = new FlowLayout(ui->scrollAreaWidgetContents);
 
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 100; i++)
+    {
         FrameControl *frameControl = new FrameControl();
         frameControl->createFrame(QPixmap(IMAGE_PATH), tr("应用"));
         flowLayout->addWidget(frameControl);

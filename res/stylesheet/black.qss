@@ -1,4 +1,5 @@
-﻿QMainWindow
+﻿/********************** MainWindow Style Sheet  *******************/
+QMainWindow
 {
 background-color:#1E1E1E;
 color:white;
@@ -25,6 +26,7 @@ background-color:#1A1A1A;
 color:white;
 }
 
+/********************** MainTitleBar Style Sheet  *******************/
 QPushButton#pushButtonClose
 {
 border-image: url(:/res/res/image/close_normal.svg);
@@ -132,6 +134,8 @@ QScrollBar::sub-line:vertical
 {
 background:url(none) center no-repeat;
 }
+
+/********************** ControlTreeWidget Style Sheet  *******************/
 QTreeWidget, QTabWidget > QWidget
 {
 background:transparent;
@@ -160,9 +164,10 @@ QTreeWidget::branch:selected
 background-color: #123456;
 }
 
+/********************** ControlTabWidget Style Sheet  *******************/
 QTabBar::tab
 {
-min-width:120px;
+min-width:100px;
 color: white;
 background-color:#1F1F1F;
 border: 0px solid;
@@ -253,4 +258,40 @@ max-height: 36px;
 QTableWidget::item:selected
 {
 out-line:none;
+}
+
+/********************** SliderWidget Style Sheet  *******************/
+QFrame#frameSlider
+{
+background-color:#1A1A1A;
+}
+
+QPushButton#pushButtonLeft
+{
+border-image: url(:/res/res/image/left_arrow_normal.png);
+}
+
+QPushButton#pushButtonLeft:hover
+{
+border-image: url(:/res/res/image/left_arrow_hover.png);
+}
+
+QPushButton#pushButtonLeft:pressed
+{
+border-image: url(:/res/res/image/left_arrow_pressed.png);
+}
+
+QPushButton#pushButtonRight
+{
+border-image: url(:/res/res/image/right_arrow_normal.png);
+}
+
+QPushButton#pushButtonRight:hover
+{
+border-image: url(:/res/res/image/right_arrow_hover.png);
+}
+
+QPushButton#pushButtonRight:pressed
+{
+border-image: url(:/res/res/image/right_arrow_pressed.png);
 }
