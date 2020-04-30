@@ -11,7 +11,7 @@
 > * 移动进度
 
 ## 轮播图示例
-![](https://github.com/YYC572652645/QCoolPage/blob/master/mkres/1.png)
+![](https://img-blog.csdnimg.cn/20200429221530217.png?)
 
 ## 柱状图示例
 ![](https://github.com/YYC572652645/QCoolPage/blob/master/mkres/2.png)
