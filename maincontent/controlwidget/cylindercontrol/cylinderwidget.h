@@ -1,4 +1,9 @@
-﻿#ifndef CYLINDERWIDGET_H
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：柱状图窗口
+ * ***************************************/
+#ifndef CYLINDERWIDGET_H
 #define CYLINDERWIDGET_H
 
 #include <QWidget>

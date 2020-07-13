@@ -1,8 +1,15 @@
-﻿#include "systemtray.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：系统托盘，未进行优化，只有最简单的
+ * 功能，后续会继续优化
+ * ***************************************/
+#include "systemtray.h"
 #include "globaldef.hpp"
 #include <QDebug>
 #include <QIcon>
 
+// 构造函数
 SystemTray::SystemTray(QWidget * parent)
     :QSystemTrayIcon(parent)
 {
@@ -11,11 +18,13 @@ SystemTray::SystemTray(QWidget * parent)
 
 }
 
+// 析构函数
 SystemTray::~SystemTray()
 {
 
 }
 
+// 添加菜单
 void SystemTray::addAction()
 {
     myMenu->addAction(showWidget);
@@ -24,6 +33,7 @@ void SystemTray::addAction()
     myMenu->addAction(exitSoftWare);
 }
 
+// 创建菜单
 void SystemTray::createAction()
 {
     myMenu = new QMenu();
@@ -41,16 +51,19 @@ void SystemTray::createAction()
     this->show();
 }
 
+// 获取关于事件
 QAction *SystemTray::getAboutSoftWare() const
 {
     return aboutSoftWare;
 }
 
+// 获取最小化事件
 QAction *SystemTray::getMinWidget() const
 {
     return minWidget;
 }
 
+// 获取显示事件
 QAction *SystemTray::getShowWidget() const
 {
     return showWidget;

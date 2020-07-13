@@ -1,4 +1,9 @@
-﻿#ifndef PROGRESSWIDGET_H
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：进度条窗口
+ * ***************************************/
+#ifndef PROGRESSWIDGET_H
 #define PROGRESSWIDGET_H
 
 #include <QWidget>

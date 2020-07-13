@@ -1,4 +1,9 @@
-﻿#ifndef CYLINDERCONTROL_H
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：柱状图
+ * ***************************************/
+#ifndef CYLINDERCONTROL_H
 #define CYLINDERCONTROL_H
 
 #include <QWidget>

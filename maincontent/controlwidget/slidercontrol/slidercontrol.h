@@ -1,3 +1,8 @@
+/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：移动进度
+ * ***************************************/
 #ifndef SLIDERCONTROL_H
 #define SLIDERCONTROL_H
 
@@ -23,8 +28,6 @@ public:
 private slots:
     void on_pushButtonLeft_clicked();
     void on_pushButtonRight_clicked();
-public slots:
-    void receiveToNormal();
 
 private:
     Ui::SliderControl *ui;

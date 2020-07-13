@@ -1,8 +1,14 @@
-﻿#include "cylinderwidget.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：柱状图窗口
+ * ***************************************/
+#include "cylinderwidget.h"
 #include "ui_cylinderwidget.h"
 #include <QLinearGradient>
 #include <QPainter>
 
+// 构造函数
 CylinderWidget::CylinderWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::CylinderWidget)
@@ -11,11 +17,13 @@ CylinderWidget::CylinderWidget(QWidget *parent) :
     this->initValue();
 }
 
+// 析构函数
 CylinderWidget::~CylinderWidget()
 {
     delete ui;
 }
 
+// 初始化
 void CylinderWidget::initValue()
 {
     ui->widgetFirst->setSliderValue(15);

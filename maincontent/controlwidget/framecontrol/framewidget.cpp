@@ -1,8 +1,14 @@
-﻿#include "framewidget.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：面板窗口
+ * ***************************************/
+#include "framewidget.h"
 #include "ui_framewidget.h"
 #include "flowlayout/flowlayout.h"
 #include "framecontrol.h"
 
+// 构造函数
 FrameWidget::FrameWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::FrameWidget)
@@ -11,11 +17,13 @@ FrameWidget::FrameWidget(QWidget *parent) :
     this->initValue();
 }
 
+// 析构函数
 FrameWidget::~FrameWidget()
 {
     delete ui;
 }
 
+// 初始化
 void FrameWidget::initValue()
 {
     flowLayout = new FlowLayout(ui->scrollAreaWidgetContents);

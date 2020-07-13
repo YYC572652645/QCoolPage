@@ -1,6 +1,12 @@
+/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：表格
+ * ***************************************/
 #include "tablecontrol.h"
 #include "ui_tablecontrol.h"
 
+// 构造函数
 TableControl::TableControl(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::TableControl)
@@ -9,11 +15,13 @@ TableControl::TableControl(QWidget *parent) :
     this->initValue();
 }
 
+// 析构函数
 TableControl::~TableControl()
 {
     delete ui;
 }
 
+// 初始化数据
 void TableControl::initValue()
 {
     ui->tableWidgetData->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -40,6 +48,7 @@ void TableControl::appendTableData(const MapTableData &mapTableData)
     }
 }
 
+// 更新数据
 void TableControl::updateTableData(const QList<MapTableData> &mapListData)
 {
     for (MapTableData mapTableData : mapListData)

@@ -1,4 +1,9 @@
-﻿#ifndef PLOTWIDGET_H
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：坐标系窗口
+ * ***************************************/
+#ifndef PLOTWIDGET_H
 #define PLOTWIDGET_H
 
 #include <QWidget>

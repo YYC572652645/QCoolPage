@@ -1,4 +1,9 @@
-﻿#ifndef FRAMEWIDGET_H
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：面板窗口
+ * ***************************************/
+#ifndef FRAMEWIDGET_H
 #define FRAMEWIDGET_H
 
 #include <QWidget>

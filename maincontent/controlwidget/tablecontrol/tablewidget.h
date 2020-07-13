@@ -1,4 +1,9 @@
-﻿#ifndef TABLEWIDGET_H
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：表格窗口
+ * ***************************************/
+#ifndef TABLEWIDGET_H
 #define TABLEWIDGET_H
 
 #include <QWidget>

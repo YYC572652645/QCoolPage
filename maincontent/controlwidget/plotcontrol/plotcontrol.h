@@ -1,4 +1,9 @@
-﻿#ifndef PLOTCONTROL_H
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：坐标系
+ * ***************************************/
+#ifndef PLOTCONTROL_H
 #define PLOTCONTROL_H
 
 #include <QWidget>

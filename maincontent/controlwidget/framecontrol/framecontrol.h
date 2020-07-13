@@ -1,4 +1,9 @@
-﻿#ifndef FRAMECONTROL_H
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：面板
+ * ***************************************/
+#ifndef FRAMECONTROL_H
 #define FRAMECONTROL_H
 
 #include <QFrame>

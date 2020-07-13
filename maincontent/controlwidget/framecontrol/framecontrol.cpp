@@ -1,10 +1,16 @@
-﻿#include "framecontrol.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：面板
+ * ***************************************/
+#include "framecontrol.h"
 #include <QFrame>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
 
+// 构造函数
 FrameControl::FrameControl(QFrame *parent) :
     QFrame(parent)
 {
@@ -13,10 +19,12 @@ FrameControl::FrameControl(QFrame *parent) :
     this->setObjectName("frameApplication");
 }
 
+// 析构函数
 FrameControl::~FrameControl()
 {
 }
 
+// 设置面板图标
 void FrameControl::setLabelPixMap(const QPixmap &pixMap)
 {
     if (labelImage != nullptr) {
@@ -24,6 +32,7 @@ void FrameControl::setLabelPixMap(const QPixmap &pixMap)
     }
 }
 
+// 设置标题
 void FrameControl::setTitleInfo(const QString &title)
 {
     if (labelTitle != nullptr) {
@@ -31,6 +40,7 @@ void FrameControl::setTitleInfo(const QString &title)
     }
 }
 
+// 创建面板
 void FrameControl::createFrame(const QPixmap &pixMap, const QString &title)
 {
     QHBoxLayout *hBoxLayout = new QHBoxLayout(this);

@@ -1,4 +1,10 @@
-﻿#include "controltabwidget.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：界面右侧的TabWidget，显示当前已有的
+ * 页面，与TreeWidget相对应
+ * ***************************************/
+#include "controltabwidget.h"
 #include "ui_controltabwidget.h"
 
 /******************   构造函数     *********************/

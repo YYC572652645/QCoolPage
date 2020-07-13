@@ -1,6 +1,12 @@
-﻿#include "progresswidget.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：进度条窗口
+ * ***************************************/
+#include "progresswidget.h"
 #include "ui_progresswidget.h"
 
+// 构造函数
 ProgressWidget::ProgressWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ProgressWidget)
@@ -9,11 +15,13 @@ ProgressWidget::ProgressWidget(QWidget *parent) :
     this->initValue();
 }
 
+// 析构函数
 ProgressWidget::~ProgressWidget()
 {
     delete ui;
 }
 
+// 初始化数据
 void ProgressWidget::initValue()
 {
     myTimer = new QTimer(this);
@@ -21,9 +29,9 @@ void ProgressWidget::initValue()
     myTimer->start();
 
    connect(myTimer, SIGNAL(timeout()), this, SLOT(updateProgress()));
-
 }
 
+// 更新进度条
 void ProgressWidget::updateProgress()
 {
     static bool showFlage = false;

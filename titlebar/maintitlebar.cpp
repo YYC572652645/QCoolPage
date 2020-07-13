@@ -1,4 +1,10 @@
-﻿#include "maintitlebar.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：主标题栏，内含有窗体最大化，最小化，关闭
+ * 以及窗口的Title，以及名称
+ * ***************************************/
+#include "maintitlebar.h"
 #include "ui_maintitlebar.h"
 
 MainTitleBar::MainTitleBar(QWidget *parent) :

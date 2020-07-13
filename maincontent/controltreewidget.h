@@ -1,4 +1,10 @@
-﻿#ifndef CONTROLTREEWIDGET_H
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：界面左侧的TreeWidget，用来列出当前
+ * 已有的界面，通过点击显示对应的Tab页
+ * ***************************************/
+#ifndef CONTROLTREEWIDGET_H
 #define CONTROLTREEWIDGET_H
 
 #include <QWidget>

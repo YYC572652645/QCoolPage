@@ -1,6 +1,12 @@
-﻿#include "cylindercontrol.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：柱状图
+ * ***************************************/
+#include "cylindercontrol.h"
 #include "ui_cylindercontrol.h"
 
+// 构造函数
 CylinderControl::CylinderControl(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::CylinderControl)
@@ -8,23 +14,28 @@ CylinderControl::CylinderControl(QWidget *parent) :
     ui->setupUi(this);
 }
 
+// 析构函数
 CylinderControl::~CylinderControl()
 {
     delete ui;
 }
 
+// 设置进度条值
 void CylinderControl::setSliderValue(float value)
 {
     sliderValue = value;
 }
 
+// 设置进度条文本
 void CylinderControl::setSliderText(const QString &value)
 {
     sliderText = value;
 }
 
+// 绘制事件
 void CylinderControl::paintEvent(QPaintEvent *paintEvent)
 {
+    Q_UNUSED(paintEvent);
     QPainter painter(this);
 
     // 进度条最大高度

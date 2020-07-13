@@ -1,6 +1,22 @@
-﻿#include "bannacontrol.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：轮播图，使用双向循环链表思想，并使用Qt
+ * 的动画组，然后对五张图片进行移动,如下所示
+ * 1，2，3，4，5分别对应五个Label中的五个图片
+ * 1的Label的坐标和大小，被2和5指向，即若向右移动
+ * 则1的大小和位置变为2的大小和位置，2的位置变为3的
+ * 大小和位置，依次类推
+ * 若向左移动，则1的大小和位置则变为5的大小和位置，
+ * 5的大小和位置则变为4的大小和位置，依次类推
+ * 1 -> 2 -> 3 -> 4 -> 5 -> 1
+ * 1 <- 2 <- 3 <- 4 <- 5 <- 1
+ * 若不理解，课查看数据结构双向循环链表
+ * ***************************************/
+#include "bannacontrol.h"
 #include "ui_bannacontrol.h"
 
+// 构造函数
 BannaControl::BannaControl(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::BannaControl)
@@ -9,11 +25,13 @@ BannaControl::BannaControl(QWidget *parent) :
     this->initValue();
 }
 
+// 析构函数
 BannaControl::~BannaControl()
 {
     delete ui;
 }
 
+// 初始化数据
 void BannaControl::initValue()
 {
     this->setWindowFlags(Qt::FramelessWindowHint);
@@ -105,8 +123,7 @@ void BannaControl::initValue()
     ui->pushButtonRight->raise();
 }
 
-
-
+// 为轮播图添加图片
 void BannaControl::addAnimationPixmap(QList<QString> &listPixmap)
 {
     if(listPixmap.size() != bannaDataList.size()) return;
@@ -118,6 +135,7 @@ void BannaControl::addAnimationPixmap(QList<QString> &listPixmap)
     }
 }
 
+// 每3S进行一次动画操作
 void BannaControl::slot_changeImageTimer()
 {
     if(animationGroup.state() != QParallelAnimationGroup::Running)
@@ -126,6 +144,7 @@ void BannaControl::slot_changeImageTimer()
     }
 }
 
+// 向左移动
 void BannaControl::on_pushButtonLeft_clicked()
 {
     if(animationGroup.state() != QParallelAnimationGroup::Running)
@@ -134,6 +153,7 @@ void BannaControl::on_pushButtonLeft_clicked()
     }
 }
 
+// 向右移动
 void BannaControl::on_pushButtonRight_clicked()
 {
     if(animationGroup.state() != QParallelAnimationGroup::Running)
@@ -142,6 +162,7 @@ void BannaControl::on_pushButtonRight_clicked()
     }
 }
 
+// 获取最右边的Label的Index
 int BannaControl::getMaxGeometryIndex(const QList<BannaData> &listData)
 {
     int maxPosX = 0;
@@ -158,6 +179,7 @@ int BannaControl::getMaxGeometryIndex(const QList<BannaData> &listData)
     return maxIndex;
 }
 
+// 图层排序
 void BannaControl::sortGeometry(const bool &isNextFlage)
 {
     /******************************************
@@ -233,6 +255,7 @@ void BannaControl::sortGeometry(const bool &isNextFlage)
     ui->pushButtonRight->raise();
 }
 
+// 设置向右移动动画
 void BannaControl::setNextAnimation()
 {
     for(int i = 0; i < bannaDataList.size(); i++)
@@ -244,6 +267,7 @@ void BannaControl::setNextAnimation()
     this->sortGeometry(true);
 }
 
+// 设置向左移动动画
 void BannaControl::setPreAnimation()
 {
     for(int i = 0; i < bannaDataList.size(); i++)

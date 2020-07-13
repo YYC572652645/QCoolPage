@@ -7,74 +7,24 @@
 
 #include "numberanimation.h"
 #include <QDebug>
+#include <QApplication>
+#include <QDebug>
 
-NumberAnimation::NumberAnimation(QWidget *parent, double *targetValue)
-    : m_parentWidget(parent)
-    , m_loopFlage(false)
-    , m_duration(30)
-    , m_targetValue(targetValue)
+NumberAnimation::NumberAnimation(QWidget *parent, double *targetValue): m_parentWidget(parent), m_targetValue(targetValue), m_loopFlage(false)
 {
-    m_numerTimer.setInterval(10);
-    connect(&m_numerTimer, SIGNAL(timeout()), this, SLOT(updateTimer()));
+    connect(this, SIGNAL(valueChanged(const QVariant &)), this, SLOT(receiveValueChanged(const QVariant &)));
+    connect(this, SIGNAL(finished()), this, SLOT(animationFinished()));
 }
 
-void NumberAnimation::setDuration(int msecs)
+void NumberAnimation::startAnimation(const QVariant &startValue, const QVariant &endValue)
 {
-    m_duration = msecs;
-}
-
-void NumberAnimation::setStartValue(const QVariant &value)
-{
-    m_startValue = value;
-}
-
-void NumberAnimation::setEndValue(const QVariant &value)
-{
-    m_endValue = value;
-}
-
-void NumberAnimation::start()
-{
-    if (m_numerTimer.isActive())
+    if (this->state() == QVariantAnimation::Running)
     {
-        m_numerTimer.stop();
+        this->stop();
     }
-
-    double distance = m_endValue.toDouble() - m_startValue.toDouble();
-    m_averageValue = (distance) / m_duration;
-    int interVal = static_cast<int>(m_averageValue / distance * m_duration);
-    m_numerTimer.setInterval(interVal <= 0 ? 1 : interVal);
-    m_numerTimer.start();
-}
-
-void NumberAnimation::stop()
-{
-    if (m_numerTimer.isActive())
-    {
-        m_numerTimer.stop();
-    }
-}
-
-void NumberAnimation::start(const QVariant &startValue, const QVariant &endValue)
-{
     this->setStartValue(startValue);
     this->setEndValue(endValue);
     this->start();
-}
-
-void NumberAnimation::updateTimer()
-{
-    if (m_targetValue != nullptr)
-    {
-        bool clockFlage = m_startValue < m_endValue;
-        this->incrementByClockwise(clockFlage);
-
-        if (nullptr != m_parentWidget)
-        {
-            m_parentWidget->repaint();
-            m_parentWidget->update();
-        }
-    }
 }
 
 void NumberAnimation::setLoopFlage(bool loopFlage)
@@ -82,31 +32,24 @@ void NumberAnimation::setLoopFlage(bool loopFlage)
     m_loopFlage = loopFlage;
 }
 
-// true为顺时针增加，false为逆时针增加
-void NumberAnimation::incrementByClockwise(bool clockFlage)
+void NumberAnimation::receiveValueChanged(const QVariant &value)
 {
-    double startValue = clockFlage ? *m_targetValue + m_averageValue : m_endValue.toDouble();
-    double endValue = clockFlage ? m_endValue.toDouble() : *m_targetValue + m_averageValue;
-    if (startValue <= endValue)
-    {
-        *m_targetValue += m_averageValue;
-    }
-    else
-    {
-        *m_targetValue = m_endValue.toInt();
-        if (m_numerTimer.isActive())
-        {
-            m_numerTimer.stop();
+    *m_targetValue = value.toDouble();
+    this->updateParentWidget();
+}
 
-            // 如果设置为可以循环，
-            // 则动画以呼吸的方式来回变化
-            // 增加 ->减少->增加->forever
-            if (m_loopFlage)
-            {
-                double startValue = m_endValue.toDouble();
-                double endValue = m_startValue.toDouble();
-                this->start(startValue, endValue);
-            }
-        }
+void NumberAnimation::animationFinished()
+{
+    if (m_loopFlage)
+    {
+        this->startAnimation(this->endValue(), this->startValue());
+    }
+}
+
+void NumberAnimation::updateParentWidget()
+{
+    if (nullptr != m_parentWidget)
+    {
+        m_parentWidget->update();
     }
 }

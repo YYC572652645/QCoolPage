@@ -1,6 +1,12 @@
+/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：可移动按钮
+ * ***************************************/
 #include "movecontrol.h"
 #include "ui_movecontrol.h"
 
+// 构造函数
 MoveControl::MoveControl(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MoveControl)
@@ -9,17 +15,20 @@ MoveControl::MoveControl(QWidget *parent) :
     this->initValue();
 }
 
+// 析构函数
 MoveControl::~MoveControl()
 {
     delete ui;
 }
 
+// 初始化
 void MoveControl::initValue()
 {
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->setAttribute(Qt::WA_TranslucentBackground, true);
 }
 
+// 鼠标点击事件
 void MoveControl::mousePressEvent(QMouseEvent *event)
 {
     this->setFocus();
@@ -30,11 +39,13 @@ void MoveControl::mousePressEvent(QMouseEvent *event)
     movePoint = event->globalPos() - this->pos();
 }
 
+// 鼠标释放事件
 void MoveControl::mouseReleaseEvent(QMouseEvent *)
 {
     mousePress = false;
 }
 
+// 鼠标移动事件
 void MoveControl::mouseMoveEvent(QMouseEvent *event)
 {
     if(mousePress)
@@ -44,6 +55,7 @@ void MoveControl::mouseMoveEvent(QMouseEvent *event)
     }
 }
 
+// 按键移动事件
 void MoveControl::keyPressEvent(QKeyEvent *keyEvent)
 {
     const int keyMoveDis = 2;
@@ -65,6 +77,7 @@ void MoveControl::keyPressEvent(QKeyEvent *keyEvent)
     }
 }
 
+// 关闭当前窗口
 void MoveControl::on_pushButtonCloseControl_clicked()
 {
     this->close();

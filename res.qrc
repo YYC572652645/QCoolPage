@@ -29,4 +29,7 @@
         <file>res/image/right_arrow_normal.png</file>
         <file>res/image/right_arrow_pressed.png</file>
     </qresource>
+    <qresource prefix="/qt">
+        <file>etc/qt.conf</file>
+    </qresource>
 </RCC>

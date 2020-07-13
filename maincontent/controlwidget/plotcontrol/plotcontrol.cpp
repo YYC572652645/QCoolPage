@@ -1,7 +1,13 @@
-﻿#include "plotcontrol.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：坐标系
+ * ***************************************/
+#include "plotcontrol.h"
 #include "ui_plotcontrol.h"
 #include <QDebug>
 
+// 构造函数
 PlotControl::PlotControl(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::PlotControl)
@@ -10,11 +16,13 @@ PlotControl::PlotControl(QWidget *parent) :
     this->initValue();
 }
 
+// 析构函数
 PlotControl::~PlotControl()
 {
     delete ui;
 }
 
+// 初始化
 void PlotControl::initValue()
 {
     //可放大缩小
@@ -62,6 +70,7 @@ void PlotControl::initValue()
     ui->widgetCustomPlot->installEventFilter(this);
 }
 
+// 设置图表数据
 void PlotControl::setControlData(const CoorData &coorData)
 {
     pointData = coorData;
@@ -71,10 +80,11 @@ void PlotControl::setControlData(const CoorData &coorData)
 }
 
 
-/*********************     鼠标移动    ********************/
+// 鼠标移动
 bool PlotControl::eventFilter(QObject *watched, QEvent *event)
 {
-    if(watched == ui->widgetCustomPlot && event->type() == QEvent::MouseMove) {
+    if(watched == ui->widgetCustomPlot && event->type() == QEvent::MouseMove)
+    {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
         int xPos = mouseEvent->pos().x();
         int yPos = mouseEvent->pos().y();
@@ -95,7 +105,7 @@ bool PlotControl::eventFilter(QObject *watched, QEvent *event)
     return QWidget::eventFilter(watched, event);
 }
 
-
+// 匹配距离当前鼠标最近的点
 QPoint PlotControl::matchPoint(QPoint point)
 {
     /******************************************
@@ -106,25 +116,31 @@ QPoint PlotControl::matchPoint(QPoint point)
 
     QList<QPoint> pointList;
     QList<float> compareompareList;
-    for(int i = 0; i < pointData.dataX.size(); i ++) {
+    for(int i = 0; i < pointData.dataX.size(); i ++)
+    {
         float diffValue = point.x() - pointData.dataX.at(i);
-        if(diffValue > -1 && diffValue < 1) {
+        if(diffValue > -1 && diffValue < 1)
+        {
             pointList.append(QPoint(pointData.dataX.at(i), pointData.dataY.at(i)));
 
             compareompareList.append(std::abs(pointData.dataX.at(i) - point.x()));
         }
     }
 
-    if(compareompareList.size() != 0) {
+    if(compareompareList.size() != 0)
+    {
         int minIndex = 0;
         float minValue = compareompareList.at(0);
-        for(int i = 0; i < compareompareList.size(); i ++) {
-            if(compareompareList.at(i) < minValue) {
+        for(int i = 0; i < compareompareList.size(); i ++)
+        {
+            if(compareompareList.at(i) < minValue)
+            {
                 minValue = compareompareList.at(i);
                 minIndex = i;
             }
         }
-        if (minIndex < pointList.size()) {
+        if (minIndex < pointList.size())
+        {
             return pointList.at(minIndex);
         }
     }

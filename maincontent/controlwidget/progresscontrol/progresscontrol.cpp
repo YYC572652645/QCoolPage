@@ -1,7 +1,13 @@
-﻿#include "progresscontrol.h"
+﻿/*****************************************
+ * 作者: YYC
+ * 日期: 2020-04-26
+ * 功能：进度条
+ * ***************************************/
+#include "progresscontrol.h"
 #include "ui_progresscontrol.h"
 #include <QDebug>
 
+// 构造函数
 ProgressControl::ProgressControl(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ProgressControl)
@@ -9,11 +15,13 @@ ProgressControl::ProgressControl(QWidget *parent) :
     ui->setupUi(this);
 }
 
+// 析构函数
 ProgressControl::~ProgressControl()
 {
     delete ui;
 }
 
+// 设置进度条进度
 void ProgressControl::setProgressValue(int value)
 {
     while (progressValue < value)
@@ -26,16 +34,19 @@ void ProgressControl::setProgressValue(int value)
     this->repaint();
 }
 
+// 设置进度条颜色
 void ProgressControl::setPaintColor(const QColor &value)
 {
     paintColor = value;
 }
 
+// 设置进度条100%
 void ProgressControl::setProgressFinish()
 {
     progressValue = 100;
 }
 
+// 绘制事件
 void ProgressControl::paintEvent(QPaintEvent *paintEvent)
 {
     Q_UNUSED(paintEvent);
