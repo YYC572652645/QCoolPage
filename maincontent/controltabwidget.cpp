@@ -90,6 +90,13 @@ void ControlTabWidget::initValue()
         tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_SLIDER);
         mapTabWidget[TAB_SLIDER] = tabWidgetData;
     }
+
+    {
+        TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabOpengl;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_OPENGL);
+        mapTabWidget[TAB_OPENGL] = tabWidgetData;
+    }
 }
 
 /******************   关闭当前页     *********************/

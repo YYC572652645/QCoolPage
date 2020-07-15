@@ -41,7 +41,15 @@ SOURCES += main.cpp\
     maincontent/controlwidget/tablecontrol/tablewidget.cpp \
     numberanimation/numberanimation.cpp \
     maincontent/controlwidget/slidercontrol/slidercontrol.cpp \
-    maincontent/controlwidget/slidercontrol/sliderwidget.cpp
+    maincontent/controlwidget/slidercontrol/sliderwidget.cpp \
+    maincontent/controlwidget/openglcontrol/cameralibrary.cpp \
+    maincontent/controlwidget/openglcontrol/objectfactory.cpp \
+    maincontent/controlwidget/openglcontrol/shaderlibrary.cpp \
+    maincontent/controlwidget/openglcontrol/texturelibrary.cpp \
+    maincontent/controlwidget/openglcontrol/objectmodel/objectparent.cpp \
+    maincontent/controlwidget/openglcontrol/objectmodel/objectcube.cpp \
+    maincontent/controlwidget/openglcontrol/openglcontrol.cpp \
+    maincontent/controlwidget/openglcontrol/openglwidget.cpp
 
 HEADERS  += mainwindow.h \
     globaldef.hpp \
@@ -68,7 +76,16 @@ HEADERS  += mainwindow.h \
     maincontent/controlwidget/tablecontrol/tablewidget.h \
     numberanimation/numberanimation.h \
     maincontent/controlwidget/slidercontrol/slidercontrol.h \
-    maincontent/controlwidget/slidercontrol/sliderwidget.h
+    maincontent/controlwidget/slidercontrol/sliderwidget.h \
+    maincontent/controlwidget/openglcontrol/cameralibrary.h \
+    maincontent/controlwidget/openglcontrol/objectfactory.h \
+    maincontent/controlwidget/openglcontrol/opengldef.h \
+    maincontent/controlwidget/openglcontrol/shaderlibrary.h \
+    maincontent/controlwidget/openglcontrol/texturelibrary.h \
+    maincontent/controlwidget/openglcontrol/objectmodel/objectparent.h \
+    maincontent/controlwidget/openglcontrol/objectmodel/objectcube.h \
+    maincontent/controlwidget/openglcontrol/openglcontrol.h \
+    maincontent/controlwidget/openglcontrol/openglwidget.h
 
 FORMS    += mainwindow.ui \
     titlebar/maintitlebar.ui \
@@ -88,9 +105,12 @@ FORMS    += mainwindow.ui \
     maincontent/controlwidget/tablecontrol/tablecontrol.ui \
     maincontent/controlwidget/tablecontrol/tablewidget.ui \
     maincontent/controlwidget/slidercontrol/slidercontrol.ui \
-    maincontent/controlwidget/slidercontrol/sliderwidget.ui
+    maincontent/controlwidget/slidercontrol/sliderwidget.ui \
+    maincontent/controlwidget/openglcontrol/openglwidget.ui
 
 RESOURCES += \
-    res.qrc
+    res.qrc \
+    res/shaders.qrc \
+    res/textures.qrc
 
 RC_FILE += myapp.rc

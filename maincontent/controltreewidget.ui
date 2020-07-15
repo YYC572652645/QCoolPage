@@ -84,6 +84,11 @@
        <string>移动进度</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>三维模型</string>
+      </property>
+     </item>
     </widget>
    </item>
   </layout>

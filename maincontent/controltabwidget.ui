@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>697</width>
+    <height>436</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -71,6 +71,11 @@
        <string>移动进度</string>
       </attribute>
      </widget>
+     <widget class="OpenglWidget" name="tabOpengl">
+      <attribute name="title">
+       <string>三维模型</string>
+      </attribute>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -122,6 +127,12 @@
    <class>SliderWidget</class>
    <extends>QWidget</extends>
    <header location="global">maincontent\controlwidget\slidercontrol\sliderwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>OpenglWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">maincontent\controlwidget\openglcontrol\openglwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
