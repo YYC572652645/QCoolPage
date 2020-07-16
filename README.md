@@ -38,6 +38,9 @@
 ## 三维模型示例
 ![](https://img-blog.csdnimg.cn/20200716084556704.png)
 
+## 开源不易，请作者喝杯奶茶
+![](https://img-blog.csdnimg.cn/20200716085321356.png)
+
 ## CSDN网址： 
 https://blog.csdn.net/yinyuchen1/article/details/100639853
 
