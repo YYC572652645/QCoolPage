@@ -9,6 +9,7 @@
 > * 可移动按钮
 > * 表格
 > * 移动进度
+> * 三维模型
 
 ## 轮播图示例
 ![](https://img-blog.csdnimg.cn/20200429221530217.png)
@@ -35,6 +36,7 @@
 ![](https://img-blog.csdnimg.cn/20200429221845482.png)
 
 ## 三维模型示例
+![](https://img-blog.csdnimg.cn/20200716084556704.png)
 
 ## CSDN网址： 
 https://blog.csdn.net/yinyuchen1/article/details/100639853
