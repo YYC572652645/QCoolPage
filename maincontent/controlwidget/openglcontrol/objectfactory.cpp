@@ -32,33 +32,6 @@ ObjectParent *ObjectFactory::makeObject(ObjectType objectType)
     case OBJECT_MAX: break;
     default: break;
     }
-    if (nullptr != objectParent)
-    {
-        m_allObjectList.append(objectParent);
-    }
     return objectParent;
 }
 
-void ObjectFactory::processMouseEvent(float deltaX, float deltaY)
-{
-    for (ObjectParent* object : m_allObjectList)
-    {
-        object->getCameraLibrary().processMouseEvent(deltaX, deltaY);
-    }
-}
-
-void ObjectFactory::moveToForward()
-{
-    for (ObjectParent* object : m_allObjectList)
-    {
-        object->getCameraLibrary().moveToForward();
-    }
-}
-
-void ObjectFactory::moveToBackward()
-{
-    for (ObjectParent* object : m_allObjectList)
-    {
-        object->getCameraLibrary().moveToBackward();
-    }
-}

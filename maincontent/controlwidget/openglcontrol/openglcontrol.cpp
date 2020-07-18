@@ -38,10 +38,11 @@ void OpenglControl::initializeGL()
         m_objectList.append(OBJECT_FACTORY->makeObject(ObjectFactory::OBJECT_CUBE));
     }
 
+    m_cameraLibrary.setupCamera(OpenglSpace::CAMERA_POS, OpenglSpace::TARGET_POS, OpenglSpace::WORLD_UP);
     for (int i = 0; i < m_objectList.size(); i++)
     {
         m_objectList.at(i)->setWindowSize(width(), height());
-        m_objectList.at(i)->setupCamera(OpenglSpace::CAMERA_POS, OpenglSpace::TARGET_POS, OpenglSpace::WORLD_UP);
+        m_objectList.at(i)->setCameraLibrary(&m_cameraLibrary);
         m_objectList.at(i)->setupShader(OpenglSpace::VERTEX_PATH, OpenglSpace::FRAMENT_PATH);
         m_objectList.at(i)->setupPerspective(45.0f);
         m_objectList.at(i)->makeObject();
@@ -81,11 +82,11 @@ void OpenglControl::wheelEvent(QWheelEvent *wheelEvent)
 {
     if(wheelEvent->delta() > 0)
     {
-        OBJECT_FACTORY->moveToForward();
+        m_cameraLibrary.moveToForward();
     }
     else
     {
-        OBJECT_FACTORY->moveToBackward();
+        m_cameraLibrary.moveToBackward();
     }
     this->update();
 }

@@ -22,16 +22,12 @@ public:
         OBJECT_MAX
     };
     static ObjectFactory* getInstance();
-    void moveToForward();
-    void moveToBackward();
-    void processMouseEvent(float deltaX, float deltaY);
     ObjectParent *makeObject(ObjectType objectType);
 private:
     ObjectFactory();
     ~ObjectFactory();
 private:
     static ObjectFactory* instance;
-    QList<ObjectParent*> m_allObjectList;
 };
 
 #endif // OBJECTFACTORY_H

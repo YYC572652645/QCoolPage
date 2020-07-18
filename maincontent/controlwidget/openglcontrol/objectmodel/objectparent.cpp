@@ -86,15 +86,6 @@ void ObjectParent::setupTexture(const QList<QString> &imagePathList)
     m_textureLibrary.generateTexture(imagePathList);
 }
 
-void ObjectParent::setupCamera(QVector3D position, QVector3D target, QVector3D worldUp)
-{
-    m_cameraLibrary.setupCamera(position, target, worldUp);
-}
-void ObjectParent::setupCamera(QVector3D position, float pitch, float yaw, QVector3D worldUp)
-{
-    m_cameraLibrary.setupCamera(position, pitch, yaw, worldUp);
-}
-
 void ObjectParent::setWindowWidth(const int &windowWidth)
 {
     m_windowWidth = windowWidth;
@@ -154,9 +145,9 @@ int ObjectParent::getVertexCount()
     return m_ebo.size() / sizeof(GLfloat);
 }
 
-CameraLibrary &ObjectParent::getCameraLibrary()
+void ObjectParent::setCameraLibrary(CameraLibrary *cameraLibrary)
 {
-    return m_cameraLibrary;
+    m_cameraLibrary = cameraLibrary;
 }
 
 void ObjectParent::setOpenGLFunctions(QOpenGLFunctions *openGLFunctions)
@@ -172,7 +163,10 @@ void ObjectParent::setOpenGLWidget(QOpenGLWidget *openGLWidget)
 
 void ObjectParent::setupObjectShaderMat()
 {
-    m_viewMat = m_cameraLibrary.getViewMat4x4();
+    if (nullptr != m_cameraLibrary)
+    {
+        m_viewMat = m_cameraLibrary->getViewMat4x4();
+    }
     m_shaderLibrary.setUniformValue("modelMat", m_modelMat);
     m_shaderLibrary.setUniformValue("viewMat", m_viewMat);
     m_shaderLibrary.setUniformValue("projMat", m_projMat);

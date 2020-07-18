@@ -38,13 +38,10 @@ public:
     virtual void makeObject();
     virtual void drawObject();
     virtual void setupObjectShaderMat();
-    CameraLibrary& getCameraLibrary();
     void setupShader(const QString &vertexPath, const QString &fragmentPath);
     void setupTexture(const QImage &image);
     void setupTexture(const QString &imagePath);
     void setupTexture(const QList<QString> &imagePathList);
-    void setupCamera(QVector3D position, QVector3D target, QVector3D worldUp);
-    void setupCamera(QVector3D position, float pitch, float yaw, QVector3D worldUp);
     void setWindowWidth(const int &windowWidth);
     void setWindowHeight(const int &windowHeight);
     void setWindowSize(const int &windowWidth, const int &windowHeight);
@@ -57,7 +54,9 @@ public:
     void setupPerspective(const GLfloat &angleData);
     void setOpenGLFunctions(QOpenGLFunctions *openGLFunctions);
     void setOpenGLWidget(QOpenGLWidget *openGLWidget);
+    void setCameraLibrary(CameraLibrary *cameraLibrary);
     int getVertexCount();
+
 
 signals:
     void sendUpdate();
@@ -67,7 +66,7 @@ protected:
     QOpenGLBuffer m_ebo;
     ShaderLibrary m_shaderLibrary;
     TextureLibrary m_textureLibrary;
-    CameraLibrary m_cameraLibrary;
+    CameraLibrary *m_cameraLibrary;
     QMatrix4x4 m_modelMat;
     QMatrix4x4 m_viewMat;
     QMatrix4x4 m_projMat;

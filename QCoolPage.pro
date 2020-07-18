@@ -14,6 +14,7 @@ TEMPLATE = app
 MOC_DIR = $$OUT_PWD/mocfile
 OBJECTS_DIR = $$OUT_PWD/objfile
 UI_DIR = $$OUT_PWD/uifile
+RCC_DIR = $$OUT_PWD/rcfile
 
 
 SOURCES += main.cpp\

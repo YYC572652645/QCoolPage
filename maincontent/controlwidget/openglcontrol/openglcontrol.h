@@ -13,6 +13,7 @@
 #include "shaderlibrary.h"
 #include "texturelibrary.h"
 #include "objectfactory.h"
+#include "cameralibrary.h"
 
 class OpenglControl : public QOpenGLWidget, protected QOpenGLFunctions
 {
@@ -29,6 +30,8 @@ protected:
 private:
     QList <ObjectParent*> m_objectList;
     void wheelEvent(QWheelEvent *wheelEvent) override;
+private:
+    CameraLibrary m_cameraLibrary;
 };
 
 #endif
