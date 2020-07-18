@@ -35,7 +35,6 @@ void MainWindow::initValue()
 
     // 将TreeWidget点击的index与TabWidget页面显示的index相互绑定
     connect(ui->widgetTree, SIGNAL(sendShowIndex(WidgetTabType)), ui->widgetTab, SLOT(receiveShowCurrentTab(WidgetTabType)));
-    connect(ui->widgetTab, SIGNAL(sendShowIndex(WidgetTabType)), ui->widgetTree, SLOT(receiveShowCurrentTab(WidgetTabType)));
 }
 
 

@@ -1,12 +1,12 @@
 ﻿/********************** MainWindow Style Sheet  *******************/
 QMainWindow
 {
-background-color:#1E1E1E;
+background-color:#1A1A1A;
 color:white;
 }
 QFrame#frameBorder,#frameBackground
 {
-background-color:#1A1A1A;
+background-color:#1F1F1F;
 color:white;
 }
 
@@ -15,68 +15,46 @@ QLabel
 color:white;
 }
 
-QLineEdit
-{
-background-color:#1A1A1A;
-color:white;
-}
-QTextEdit
-{
-background-color:#1A1A1A;
-color:white;
-}
-
 /********************** MainTitleBar Style Sheet  *******************/
 QPushButton#pushButtonClose
 {
-border-image: url(:/res/res/image/close_normal.svg);
+border-image: url(:/res/res/image/close_normal.png);
 }
 
 QPushButton#pushButtonClose:hover
 {
-border-image: url(:/res/res/image/close_hover.svg);
+border-image: url(:/res/res/image/close_hover.png);
 }
 
 QPushButton#pushButtonMin
 {
-border-image: url(:/res/res/image/min_normal.svg);
+border-image: url(:/res/res/image/min_normal.png);
 }
 
 QPushButton#pushButtonMin:hover
 {
-border-image: url(:/res/res/image/min_hover.svg);
+border-image: url(:/res/res/image/min_hover.png);
 }
 
 
 QPushButton#pushButtonMax
 {
-border-image: url(:/res/res/image/max_normal.svg);
+border-image: url(:/res/res/image/max_normal.png);
 }
 
 QPushButton#pushButtonMax:hover
 {
-border-image: url(:/res/res/image/max_hover.svg);
-}
-
-QPushButton#pushButtonMax:pressed
-{
-border-image: url(:/res/res/image/max_normal.svg);
+border-image: url(:/res/res/image/max_hover.png);
 }
 
 QPushButton#pushButtonNormal
 {
-border-image: url(:/res/res/image/normal_normal.svg);
+border-image: url(:/res/res/image/normal_normal.png);
 }
 
 QPushButton#pushButtonNormal:hover
 {
-border-image: url(:/res/res/image/normal_hover.svg);
-}
-
-QPushButton#pushButtonNormal:pressed
-{
-border-image: url(:/res/res/image/normal_normal.svg);
-
+border-image: url(:/res/res/image/normal_hover.png);
 }
 
 QPushButton#pushButtonSave:hover,#pushButtonAdd:hover
@@ -135,7 +113,7 @@ QScrollBar::sub-line:vertical
 background:url(none) center no-repeat;
 }
 
-/********************** ControlTreeWidget Style Sheet  *******************/
+/********************** ControlFoldWidget Style Sheet  *******************/
 QTreeWidget, QTabWidget > QWidget
 {
 background:transparent;
@@ -151,7 +129,7 @@ color:white;
 
 QTreeWidget::item
 {
-height:40px;
+height:50px;
 }
 
 QTreeWidget::item:!selected:hover
@@ -197,11 +175,13 @@ background-color:transparent;
 outline:0px;
 }
 
-QFrame#frameApplication {
+QFrame#frameApplication
+{
 border:1px solid #BBBBBB;
 border-radius:5px;
 }
-QFrame#frameApplication:hover {
+QFrame#frameApplication:hover
+{
 border:1px solid #FFFFFF;
 border-radius:5px;
 }
@@ -294,4 +274,22 @@ border-image: url(:/res/res/image/right_arrow_hover.png);
 QPushButton#pushButtonRight:pressed
 {
 border-image: url(:/res/res/image/right_arrow_pressed.png);
+}
+
+/********************** SystemTray Style Sheet  *******************/
+QMenu
+{
+background-color: white;
+border: 1px solid white;
+}
+QMenu::item
+{
+background-color: transparent;
+padding:8px 32px;
+margin:0px 0px;
+border-bottom:1px solid #DBDBDB;
+}
+QMenu::item:selected
+{
+background-color: #2dabf9;
 }

@@ -33,7 +33,7 @@ void OpenglControl::initializeGL()
 
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 50; i++)
     {
         m_objectList.append(OBJECT_FACTORY->makeObject(ObjectFactory::OBJECT_CUBE));
     }

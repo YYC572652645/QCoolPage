@@ -25,7 +25,6 @@ signals:
     void sendShowIndex(WidgetTabType);
 private slots:
     void on_treeWidgetMenu_clicked(const QModelIndex &index);
-    void receiveShowCurrentTab(WidgetTabType widgetTabType);
 
 private:
     Ui::ControlTreeWidget *ui;

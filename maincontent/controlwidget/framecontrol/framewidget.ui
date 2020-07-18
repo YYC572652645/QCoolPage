@@ -17,7 +17,8 @@
    <string notr="true">QWidget
 {
 background-color: #1A1A1A;
-}</string>
+}
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
@@ -38,7 +39,10 @@ background-color: #1A1A1A;
    <item>
     <widget class="QScrollArea" name="scrollArea">
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QWidget#scrollArea
+{
+border:none;
+}</string>
      </property>
      <property name="widgetResizable">
       <bool>true</bool>
@@ -48,8 +52,8 @@ background-color: #1A1A1A;
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>398</width>
-        <height>298</height>
+        <width>400</width>
+        <height>300</height>
        </rect>
       </property>
       <property name="styleSheet">

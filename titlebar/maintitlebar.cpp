@@ -12,8 +12,8 @@ MainTitleBar::MainTitleBar(QWidget *parent) :
     ui(new Ui::MainTitleBar)
 {
     ui->setupUi(this);
-    ui->pushButtonNormalMax->setStyleSheet("QPushButton{border-image: url(:/res/res/image/normal_normal.svg);}"
-                                           "QPushButton:hover{border-image: url(:/res/res/image/normal_hover.svg);}");
+    ui->pushButtonNormalMax->setStyleSheet("QPushButton{border-image: url(:/res/res/image/normal_normal.png);}"
+                                           "QPushButton:hover{border-image: url(:/res/res/image/normal_hover.png);}");
 }
 
 MainTitleBar::~MainTitleBar()
@@ -44,13 +44,13 @@ void MainTitleBar::on_pushButtonNormalMax_clicked()
     if (parentWidget->isMaximized())
     {
         parentWidget->showNormal();
-        ui->pushButtonNormalMax->setStyleSheet("QPushButton{border-image: url(:/res/res/image/normal_normal.svg);}"
-                                               "QPushButton:hover{border-image: url(:/res/res/image/normal_hover.svg);}");
+        ui->pushButtonNormalMax->setStyleSheet("QPushButton{border-image: url(:/res/res/image/normal_normal.png);}"
+                                               "QPushButton:hover{border-image: url(:/res/res/image/normal_hover.png);}");
     }
     else
     {
         parentWidget->showMaximized();
-        ui->pushButtonNormalMax->setStyleSheet("QPushButton{border-image: url(:/res/res/image/max_normal.svg);}"
-                                               "QPushButton:hover{border-image: url(:/res/res/image/max_hover.svg);}");
+        ui->pushButtonNormalMax->setStyleSheet("QPushButton{border-image: url(:/res/res/image/max_normal.png);}"
+                                               "QPushButton:hover{border-image: url(:/res/res/image/max_hover.png);}");
     }
 }

@@ -48,51 +48,93 @@
       <property name="text">
        <string>轮播图</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignLeading|AlignVCenter</set>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/res/res/image/image.png</normalon>
+       </iconset>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>柱状图</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../res.qrc">
+        <normaloff>:/res/res/image/image.png</normaloff>:/res/res/image/image.png</iconset>
       </property>
      </item>
      <item>
       <property name="text">
        <string>进度条</string>
       </property>
+      <property name="icon">
+       <iconset resource="../res.qrc">
+        <normaloff>:/res/res/image/image.png</normaloff>:/res/res/image/image.png</iconset>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>面板</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../res.qrc">
+        <normaloff>:/res/res/image/image.png</normaloff>:/res/res/image/image.png</iconset>
       </property>
      </item>
      <item>
       <property name="text">
        <string>坐标系</string>
       </property>
+      <property name="icon">
+       <iconset resource="../res.qrc">
+        <normaloff>:/res/res/image/image.png</normaloff>:/res/res/image/image.png</iconset>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>移动按钮</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../res.qrc">
+        <normaloff>:/res/res/image/image.png</normaloff>:/res/res/image/image.png</iconset>
       </property>
      </item>
      <item>
       <property name="text">
        <string>表格</string>
       </property>
+      <property name="icon">
+       <iconset resource="../res.qrc">
+        <normaloff>:/res/res/image/image.png</normaloff>:/res/res/image/image.png</iconset>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>移动进度</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../res.qrc">
+        <normaloff>:/res/res/image/image.png</normaloff>:/res/res/image/image.png</iconset>
       </property>
      </item>
      <item>
       <property name="text">
        <string>三维模型</string>
       </property>
+      <property name="icon">
+       <iconset resource="../res.qrc">
+        <normaloff>:/res/res/image/image.png</normaloff>:/res/res/image/image.png</iconset>
+      </property>
      </item>
     </widget>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../res.qrc"/>
+ </resources>
  <connections/>
 </ui>

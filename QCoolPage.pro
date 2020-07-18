@@ -21,8 +21,8 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     titlebar/maintitlebar.cpp \
     titlebar/titlebar.cpp \
-    maincontent/controltreewidget.cpp \
     maincontent/controltabwidget.cpp \
+    maincontent/controltreewidget.cpp \
     systemtray/systemtray.cpp \
     maincontent/controlwidget/cylindercontrol/cylinderwidget.cpp \
     maincontent/controlwidget/progresscontrol/progresswidget.cpp \
@@ -52,12 +52,13 @@ SOURCES += main.cpp\
     maincontent/controlwidget/openglcontrol/openglcontrol.cpp \
     maincontent/controlwidget/openglcontrol/openglwidget.cpp
 
+
 HEADERS  += mainwindow.h \
     globaldef.hpp \
     titlebar/maintitlebar.h \
     titlebar/titlebar.h \
-    maincontent/controltreewidget.h \
     maincontent/controltabwidget.h \
+    maincontent/controltreewidget.h \
     systemtray/systemtray.h \
     maincontent/controlwidget/cylindercontrol/cylinderwidget.h \
     maincontent/controlwidget/progresscontrol/progresswidget.h \
@@ -88,10 +89,11 @@ HEADERS  += mainwindow.h \
     maincontent/controlwidget/openglcontrol/openglcontrol.h \
     maincontent/controlwidget/openglcontrol/openglwidget.h
 
+
 FORMS    += mainwindow.ui \
     titlebar/maintitlebar.ui \
-    maincontent/controltreewidget.ui \
     maincontent/controltabwidget.ui \
+    maincontent/controltreewidget.ui \
     maincontent/controlwidget/cylindercontrol/cylinderwidget.ui \
     maincontent/controlwidget/progresscontrol/progresswidget.ui \
     maincontent/controlwidget/progresscontrol/progresscontrol.ui \

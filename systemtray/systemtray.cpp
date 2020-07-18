@@ -8,6 +8,8 @@
 #include "globaldef.hpp"
 #include <QDebug>
 #include <QIcon>
+#include <QUrl>
+#include <QDesktopServices>
 
 // 构造函数
 SystemTray::SystemTray(QWidget * parent)
@@ -15,7 +17,6 @@ SystemTray::SystemTray(QWidget * parent)
 {
     this->createAction();  //创建托盘菜单
     this->addAction();     //菜单添加事件
-
 }
 
 // 析构函数
@@ -46,6 +47,7 @@ void SystemTray::createAction()
     this->setToolTip(tr("QCoolPage"));
 
     connect(exitSoftWare, SIGNAL(triggered(bool)), qApp, SLOT(quit()));
+    connect(aboutSoftWare, SIGNAL(triggered(bool)), this, SLOT(aboutSlot()));
 
     this->setContextMenu(myMenu);
     this->show();
@@ -55,6 +57,12 @@ void SystemTray::createAction()
 QAction *SystemTray::getAboutSoftWare() const
 {
     return aboutSoftWare;
+}
+
+// 关于软件
+void SystemTray::aboutSlot()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/YYC572652645/QCoolPage"));
 }
 
 // 获取最小化事件

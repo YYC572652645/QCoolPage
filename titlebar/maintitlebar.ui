@@ -61,7 +61,9 @@
         <property name="font">
          <font>
           <family>微软雅黑</family>
-          <pointsize>10</pointsize>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="text">
@@ -85,6 +87,12 @@
           <width>25</width>
           <height>25</height>
          </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
         </property>
         <property name="text">
          <string/>
@@ -115,13 +123,13 @@
         <property name="minimumSize">
          <size>
           <width>25</width>
-          <height>25</height>
+          <height>4</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>25</width>
-          <height>25</height>
+          <height>4</height>
          </size>
         </property>
         <property name="font">
@@ -141,14 +149,14 @@
        <widget class="QPushButton" name="pushButtonNormalMax">
         <property name="minimumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>20</width>
+          <height>20</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>20</width>
+          <height>20</height>
          </size>
         </property>
         <property name="font">
@@ -168,14 +176,14 @@
        <widget class="QPushButton" name="pushButtonClose">
         <property name="minimumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>20</width>
+          <height>20</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>20</width>
+          <height>20</height>
          </size>
         </property>
         <property name="text">

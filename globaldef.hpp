@@ -44,7 +44,7 @@ enum WidgetTabType
 };
 namespace GlobalSpace
 {
-const QString BLACK_QSS_FILE_PATH = ":/res/res/stylesheet/black.qss";
+const QString STYLE_QSS_FILE_PATH = ":/res/res/stylesheet/stylesheet.qss";
 const QString LOGO_PATH = ":/res/res/image/image.png";
 
 const int INT_DOUBLE_TIMES = 2;

@@ -39,14 +39,9 @@ void ControlTreeWidget::initValue()
 void ControlTreeWidget::on_treeWidgetMenu_clicked(const QModelIndex &index)
 {
     emit sendShowIndex(WidgetTabType(index.row()));
-}
-
-/******************   点击对应页显示对应项     *********************/
-void ControlTreeWidget::receiveShowCurrentTab(WidgetTabType widgetTabType)
-{
-    if (widgetTabType < ui->treeWidgetMenu->topLevelItemCount())
+    QTreeWidgetItem *treeWidgetItem = ui->treeWidgetMenu->topLevelItem(index.row());
+    if (nullptr != treeWidgetItem)
     {
-        QTreeWidgetItem *treeWidgetItem = ui->treeWidgetMenu->topLevelItem(widgetTabType);
         ui->treeWidgetMenu->clearSelection();
         treeWidgetItem->setSelected(true);
     }

@@ -1,15 +1,6 @@
 <RCC>
     <qresource prefix="/res">
         <file>res/image/image.png</file>
-        <file>res/stylesheet/black.qss</file>
-        <file>res/image/close_hover.svg</file>
-        <file>res/image/close_normal.svg</file>
-        <file>res/image/min_hover.svg</file>
-        <file>res/image/min_normal.svg</file>
-        <file>res/image/max_hover.svg</file>
-        <file>res/image/max_normal.svg</file>
-        <file>res/image/normal_hover.svg</file>
-        <file>res/image/normal_normal.svg</file>
         <file>res/image/banna/1.jpg</file>
         <file>res/image/banna/2.jpg</file>
         <file>res/image/banna/3.jpg</file>
@@ -22,6 +13,21 @@
         <file>res/image/other/circle.png</file>
         <file>res/image/other/close.png</file>
         <file>res/image/other/center_cyan.png</file>
+        <file>res/image/close_hover.png</file>
+        <file>res/image/close_normal.png</file>
+        <file>res/image/left_arrow_hover.png</file>
+        <file>res/image/left_arrow_normal.png</file>
+        <file>res/image/left_arrow_pressed.png</file>
+        <file>res/image/max_hover.png</file>
+        <file>res/image/max_normal.png</file>
+        <file>res/image/min_hover.png</file>
+        <file>res/image/min_normal.png</file>
+        <file>res/image/normal_hover.png</file>
+        <file>res/image/normal_normal.png</file>
+        <file>res/image/right_arrow_hover.png</file>
+        <file>res/image/right_arrow_normal.png</file>
+        <file>res/image/right_arrow_pressed.png</file>
+        <file>res/stylesheet/stylesheet.qss</file>
     </qresource>
     <qresource prefix="/qt">
         <file>etc/qt.conf</file>

@@ -38,6 +38,9 @@ signals:
     void showMainWindow();
     void showAboutUs();
 
+private slots:
+    void aboutSlot();
+
 private:
     QMenu *myMenu;
     QAction* showWidget;
