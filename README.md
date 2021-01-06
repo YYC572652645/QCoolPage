@@ -37,7 +37,7 @@
 ![](https://img-blog.csdnimg.cn/20200429221845482.png)
 
 ## 流程进度示例
-![](https://img-blog.csdnimg.cn/20210106170107323.png)
+![](https://img-blog.csdnimg.cn/20210106170839998.png)
 
 ## 三维模型示例
 ![](https://img-blog.csdnimg.cn/20200716084556704.png)

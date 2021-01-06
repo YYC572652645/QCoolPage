@@ -28,7 +28,7 @@ ProcessControl::~ProcessControl()
 void ProcessControl::initValue()
 {
     QString styleSheet = "QFrame#frameProcess{background:transparent;"
-                         "border:1px solid %1;border-radius: 4px;}";
+                         "border: 2px solid %1;border-radius: 4px;}";
 
     m_mapMode[TYPE_ERROR] = styleSheet.arg("rgb(153, 20, 20)");
     m_mapMode[TYPE_NORMAL] = styleSheet.arg("rgb(255, 220, 220)");

@@ -80,7 +80,7 @@ bool ProcessWidget::eventFilter(QObject *watched, QEvent *event)
     if (watched == ui->frameBackground && event->type() == QEvent::Paint)
     {
         QPainter painter(ui->frameBackground);
-        painter.setPen(QPen(m_mapColor.value(m_modeType), 1));
+        painter.setPen(QPen(m_mapColor.value(m_modeType), 2));
 
         ProcessControl *pHead = m_listHead;
         while (nullptr != pHead->getNextWidget())
