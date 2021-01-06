@@ -50,7 +50,9 @@ SOURCES += main.cpp\
     maincontent/controlwidget/openglcontrol/objectmodel/objectparent.cpp \
     maincontent/controlwidget/openglcontrol/objectmodel/objectcube.cpp \
     maincontent/controlwidget/openglcontrol/openglcontrol.cpp \
-    maincontent/controlwidget/openglcontrol/openglwidget.cpp
+    maincontent/controlwidget/openglcontrol/openglwidget.cpp \
+    maincontent/controlwidget/processcontrol/processcontrol.cpp \
+    maincontent/controlwidget/processcontrol/processwidget.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -87,7 +89,9 @@ HEADERS  += mainwindow.h \
     maincontent/controlwidget/openglcontrol/objectmodel/objectparent.h \
     maincontent/controlwidget/openglcontrol/objectmodel/objectcube.h \
     maincontent/controlwidget/openglcontrol/openglcontrol.h \
-    maincontent/controlwidget/openglcontrol/openglwidget.h
+    maincontent/controlwidget/openglcontrol/openglwidget.h \
+    maincontent/controlwidget/processcontrol/processcontrol.h \
+    maincontent/controlwidget/processcontrol/processwidget.h
 
 
 FORMS    += mainwindow.ui \
@@ -109,7 +113,9 @@ FORMS    += mainwindow.ui \
     maincontent/controlwidget/tablecontrol/tablewidget.ui \
     maincontent/controlwidget/slidercontrol/slidercontrol.ui \
     maincontent/controlwidget/slidercontrol/sliderwidget.ui \
-    maincontent/controlwidget/openglcontrol/openglwidget.ui
+    maincontent/controlwidget/openglcontrol/openglwidget.ui \
+    maincontent/controlwidget/processcontrol/processcontrol.ui \
+    maincontent/controlwidget/processcontrol/processwidget.ui
 
 RESOURCES += \
     res.qrc \

@@ -71,6 +71,11 @@
        <string>移动进度</string>
       </attribute>
      </widget>
+     <widget class="ProcessWidget" name="tabProcess">
+      <attribute name="title">
+       <string>流程进度</string>
+      </attribute>
+     </widget>
      <widget class="OpenglWidget" name="tabOpengl">
       <attribute name="title">
        <string>三维模型</string>
@@ -133,6 +138,12 @@
    <class>OpenglWidget</class>
    <extends>QWidget</extends>
    <header location="global">maincontent\controlwidget\openglcontrol\openglwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ProcessWidget</class>
+   <extends>QWidget</extends>
+   <header>maincontent\controlwidget\processcontrol\processwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

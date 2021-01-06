@@ -92,6 +92,13 @@ void ControlTabWidget::initValue()
 
     {
         TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabProcess;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_PROCESS);
+        mapTabWidget[TAB_PROCESS] = tabWidgetData;
+    }
+
+    {
+        TabWidgetData tabWidgetData;
         tabWidgetData.currentWidget = ui->tabOpengl;
         tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_OPENGL);
         mapTabWidget[TAB_OPENGL] = tabWidgetData;

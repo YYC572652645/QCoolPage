@@ -14,10 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget,QFrame
-{
-background-color: #1A1A1A;
-}</string>
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <property name="spacing">
@@ -36,7 +33,7 @@ background-color: #1A1A1A;
     <number>0</number>
    </property>
    <item>
-    <widget class="QFrame" name="frame">
+    <widget class="QFrame" name="frameBackground">
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>

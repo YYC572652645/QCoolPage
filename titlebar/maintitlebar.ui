@@ -122,14 +122,14 @@
        <widget class="QPushButton" name="pushButtonMin">
         <property name="minimumSize">
          <size>
-          <width>25</width>
-          <height>4</height>
+          <width>20</width>
+          <height>20</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>25</width>
-          <height>4</height>
+          <width>20</width>
+          <height>20</height>
          </size>
         </property>
         <property name="font">

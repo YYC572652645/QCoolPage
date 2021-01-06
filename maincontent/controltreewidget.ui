@@ -122,6 +122,16 @@
      </item>
      <item>
       <property name="text">
+       <string>流程进度</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/res/res/image/image.png</normalon>
+       </iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>三维模型</string>
       </property>
       <property name="icon">

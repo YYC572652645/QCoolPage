@@ -4,6 +4,12 @@ QMainWindow
 background-color:#1A1A1A;
 color:white;
 }
+QFrame#frameBackground
+{
+background-color: #1A1A1A;
+border:none;
+}
+
 QFrame#frameBorder,#frameBackground
 {
 background-color:#1F1F1F;
@@ -18,43 +24,59 @@ color:white;
 /********************** MainTitleBar Style Sheet  *******************/
 QPushButton#pushButtonClose
 {
-border-image: url(:/res/res/image/close_normal.png);
+border:none;
+background:rgba(255, 255, 255, 0);
+image: url(:/res/res/image/close_normal.png);
 }
 
 QPushButton#pushButtonClose:hover
 {
-border-image: url(:/res/res/image/close_hover.png);
+border:none;
+background:rgba(255, 255, 255, 0);
+image: url(:/res/res/image/close_hover.png);
 }
 
 QPushButton#pushButtonMin
 {
-border-image: url(:/res/res/image/min_normal.png);
+border:none;
+background:rgba(255, 255, 255, 0);
+image: url(:/res/res/image/min_normal.png);
 }
 
 QPushButton#pushButtonMin:hover
 {
-border-image: url(:/res/res/image/min_hover.png);
+border:none;
+background:rgba(255, 255, 255, 0);
+image: url(:/res/res/image/min_hover.png);
 }
 
 
 QPushButton#pushButtonMax
 {
-border-image: url(:/res/res/image/max_normal.png);
+border:none;
+background:rgba(255, 255, 255, 0);
+image: url(:/res/res/image/max_normal.png);
 }
 
 QPushButton#pushButtonMax:hover
 {
-border-image: url(:/res/res/image/max_hover.png);
+border:none;
+background:rgba(255, 255, 255, 0);
+image: url(:/res/res/image/max_hover.png);
 }
 
 QPushButton#pushButtonNormal
 {
-border-image: url(:/res/res/image/normal_normal.png);
+border:none;
+background:rgba(255, 255, 255, 0);
+image: url(:/res/res/image/normal_normal.png);
 }
 
 QPushButton#pushButtonNormal:hover
 {
-border-image: url(:/res/res/image/normal_hover.png);
+border:none;
+background:rgba(255, 255, 255, 0);
+image: url(:/res/res/image/normal_hover.png);
 }
 
 QPushButton#pushButtonSave:hover,#pushButtonAdd:hover
@@ -175,6 +197,7 @@ background-color:transparent;
 outline:0px;
 }
 
+/********************** FrameControl Style Sheet  *******************/
 QFrame#frameApplication
 {
 border:1px solid #BBBBBB;
@@ -186,13 +209,14 @@ border:1px solid #FFFFFF;
 border-radius:5px;
 }
 
-
-/********************** TableWidget Style Sheet  *******************/
-QFrame#frameTable
+QWidget#scrollAreaWidgetContents
 {
-background-color:#194F62;
+background-color: #1A1A1A;
+border:none;
 }
 
+
+/********************** TableWidget Style Sheet  *******************/
 QLabel#labelTableText
 {
 font-family: Microsoft YaHei;
@@ -292,4 +316,12 @@ border-bottom:1px solid #DBDBDB;
 QMenu::item:selected
 {
 background-color: #2dabf9;
+}
+
+/********************** ProcessControl Style Sheet  *******************/
+QFrame#frameProcess
+{
+background:transparent;
+border:1px solid rgb(255, 220, 220);
+border-radius: 4px;
 }

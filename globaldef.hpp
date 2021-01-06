@@ -38,6 +38,7 @@ enum WidgetTabType
     TAB_MOVE_BUTTON,
     TAB_TABLE_WIDGET,
     TAB_SLIDER,
+    TAB_PROCESS,
     TAB_OPENGL,
     TAB_MAX,
 

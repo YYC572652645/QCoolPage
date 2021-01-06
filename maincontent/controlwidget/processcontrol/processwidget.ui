@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TableWidget</class>
- <widget class="QWidget" name="TableWidget">
+ <class>ProcessWidget</class>
+ <widget class="QWidget" name="ProcessWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>717</width>
-    <height>458</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,38 +40,10 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <widget class="TableControl" name="widgetTable" native="true"/>
-      </item>
-     </layout>
     </widget>
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>TableControl</class>
-   <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\tablecontrol\tablecontrol.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
