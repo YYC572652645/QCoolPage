@@ -54,7 +54,9 @@ SOURCES += main.cpp\
     maincontent/controlwidget/processcontrol/processcontrol.cpp \
     maincontent/controlwidget/processcontrol/processwidget.cpp \
     maincontent/controlwidget/listcontrol/listcontrol.cpp \
-    maincontent/controlwidget/listcontrol/listwidget.cpp
+    maincontent/controlwidget/listcontrol/listwidget.cpp \
+    screen/mainobject.cpp \
+    screen/splashscreen.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -95,7 +97,9 @@ HEADERS  += mainwindow.h \
     maincontent/controlwidget/processcontrol/processcontrol.h \
     maincontent/controlwidget/processcontrol/processwidget.h \
     maincontent/controlwidget/listcontrol/listcontrol.h \
-    maincontent/controlwidget/listcontrol/listwidget.h
+    maincontent/controlwidget/listcontrol/listwidget.h \
+    screen/mainobject.h \
+    screen/splashscreen.h
 
 
 FORMS    += mainwindow.ui \
