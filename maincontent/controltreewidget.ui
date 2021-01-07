@@ -86,6 +86,15 @@
      </item>
      <item>
       <property name="text">
+       <string>列表</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../res.qrc">
+        <normaloff>:/res/res/image/image.png</normaloff>:/res/res/image/image.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>坐标系</string>
       </property>
       <property name="icon">

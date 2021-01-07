@@ -63,6 +63,13 @@ void ControlTabWidget::initValue()
 
     {
         TabWidgetData tabWidgetData;
+        tabWidgetData.currentWidget = ui->tabList;
+        tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_LIST);
+        mapTabWidget[TAB_LIST] = tabWidgetData;
+    }
+
+    {
+        TabWidgetData tabWidgetData;
         tabWidgetData.currentWidget = ui->tabPlot;
         tabWidgetData.currentTabText = ui->tabWidgetControl->tabText(TAB_CUSTOM_PLOT);
         mapTabWidget[TAB_CUSTOM_PLOT] = tabWidgetData;

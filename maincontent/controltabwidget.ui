@@ -51,6 +51,11 @@
        <string>面板</string>
       </attribute>
      </widget>
+     <widget class="ListWidget" name="tabList">
+      <attribute name="title">
+       <string>列表</string>
+      </attribute>
+     </widget>
      <widget class="PlotWidget" name="tabPlot">
       <attribute name="title">
        <string> 坐标系</string>
@@ -144,6 +149,12 @@
    <class>ProcessWidget</class>
    <extends>QWidget</extends>
    <header>maincontent/controlwidget/processcontrol/processwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ListWidget</class>
+   <extends>QWidget</extends>
+   <header>maincontent/controlwidget/listcontrol/listwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

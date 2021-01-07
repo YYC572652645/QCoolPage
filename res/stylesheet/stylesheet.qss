@@ -25,7 +25,7 @@ border:none;
 
 QLabel
 {
-color:white;
+color: #FFFFFF;
 }
 
 /********************** MainTitleBar Style Sheet  *******************/
@@ -260,7 +260,7 @@ alternate-background-color: #2A2A2A;
 
 QTableWidget::item
 {
-font-family: PingFangSC-Regular;
+font-family: Microsoft YaHei;
 font-size: 10px;
 min-height: 36px;
 max-height: 36px;
@@ -340,3 +340,24 @@ background:transparent;
 border:1px solid rgb(255, 220, 220);
 border-radius: 4px;
 }
+
+/********************** ListControl Style Sheet  *******************/
+QFrame#frameLine
+{
+background: rgba(255, 220, 220, 40);
+}
+
+QLabel#labelAppName
+{
+font-family: Microsoft YaHei;
+font-size: 16px;
+color: #FFFFFF;
+}
+
+QLabel#labelAppText
+{
+font-family: Microsoft YaHei;
+font-size: 12px;
+color: #AAAAAA;
+}
+
