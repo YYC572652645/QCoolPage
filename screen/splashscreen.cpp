@@ -9,15 +9,16 @@
 #include <QApplication>
 #include <QGuiApplication>
 #include <QDebug>
-#include "globaldef.hpp"
+#include "numberanimation/numberanimation.h"
 
-SplashScreen *SplashScreen::m_staticInstance = nullptr;
+SplashScreen *SplashScreen::m_instance = nullptr;
 
 // 构造函数
 SplashScreen::SplashScreen(const QPixmap &pixmap)
     : QSplashScreen(pixmap)
     , m_percent(0)
-    , m_widget(nullptr)
+    , m_mainWidget(nullptr)
+    , m_propertyAnimation(nullptr)
 {
 }
 
@@ -30,11 +31,11 @@ SplashScreen::~SplashScreen()
 // 单例模式
 SplashScreen *SplashScreen::getInstance()
 {
-    if(nullptr == m_staticInstance)
+    if(nullptr == m_instance)
     {
-        m_staticInstance = new SplashScreen(QPixmap(":/res/res/image/other/splash.png"));
+        m_instance = new SplashScreen(QPixmap(":/res/res/image/other/splash.png"));
     }
-    return m_staticInstance;
+    return m_instance;
 }
 
 // 绘制事件
@@ -106,6 +107,8 @@ void SplashScreen::paintEvent(QPaintEvent *event)
     }
 }
 
+
+
 // 设置进度
 void SplashScreen::setStagePercent(const int &percent, const QString &message)
 {
@@ -133,9 +136,17 @@ void SplashScreen::setStart(QWidget *widget, const QString &title, const QString
 {
     if (nullptr != widget)
     {
-        m_widget = widget;
+        m_mainWidget = widget;
         m_pixLogo = QPixmap(logoFile);
         m_textLogo = title;
+        m_mainWidget->setWindowOpacity(0.0);
+        if (nullptr == m_propertyAnimation)
+        {
+            m_propertyAnimation = new QPropertyAnimation(m_mainWidget, "windowOpacity");
+            m_propertyAnimation->setDuration(ANIMATION_DURATION);
+            m_propertyAnimation->setStartValue(0.0);
+            m_propertyAnimation->setEndValue(1.0);
+        }
     }
 }
 
@@ -143,9 +154,13 @@ void SplashScreen::setStart(QWidget *widget, const QString &title, const QString
 void SplashScreen::setFinish()
 {
     this->close();
-    if (nullptr != m_widget)
+    if (nullptr != m_mainWidget)
     {
-        m_widget->activateWindow();
-        m_widget->raise();
+        m_mainWidget->activateWindow();
+        m_mainWidget->raise();
+    }
+    if (nullptr != m_propertyAnimation)
+    {
+        m_propertyAnimation->start();
     }
 }
