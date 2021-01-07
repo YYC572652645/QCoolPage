@@ -89,61 +89,61 @@
   <customwidget>
    <class>BannaWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\bannacontrol\bannawidget.h</header>
+   <header location="global">maincontent/controlwidget/bannacontrol/bannawidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>CylinderWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\cylindercontrol\cylinderwidget.h</header>
+   <header location="global">maincontent/controlwidget/cylindercontrol/cylinderwidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>ProgressWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\progresscontrol\progresswidget.h</header>
+   <header location="global">maincontent/controlwidget/progresscontrol/progresswidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>FrameWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\framecontrol\framewidget.h</header>
+   <header location="global">maincontent/controlwidget/framecontrol/framewidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>PlotWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\plotcontrol\plotwidget.h</header>
+   <header location="global">maincontent/controlwidget/plotcontrol/plotwidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>MoveWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\movecontrol\movewidget.h</header>
+   <header location="global">maincontent/controlwidget/movecontrol/movewidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>TableWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\tablecontrol\tablewidget.h</header>
+   <header location="global">maincontent/controlwidget/tablecontrol/tablewidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>SliderWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\slidercontrol\sliderwidget.h</header>
+   <header location="global">maincontent/controlwidget/slidercontrol/sliderwidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>OpenglWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\openglcontrol\openglwidget.h</header>
+   <header location="global">maincontent/controlwidget/openglcontrol/openglwidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>ProcessWidget</class>
    <extends>QWidget</extends>
-   <header>maincontent\controlwidget\processcontrol\processwidget.h</header>
+   <header>maincontent/controlwidget/processcontrol/processwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

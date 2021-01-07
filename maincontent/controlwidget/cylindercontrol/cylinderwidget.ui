@@ -83,7 +83,7 @@
   <customwidget>
    <class>CylinderControl</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\cylindercontrol\cylindercontrol.h</header>
+   <header location="global">maincontent/controlwidget/cylindercontrol/cylindercontrol.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

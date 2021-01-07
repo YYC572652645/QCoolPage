@@ -13,9 +13,11 @@
 #include "numberanimation/numberanimation.h"
 
 // 构造函数
-SliderControl::SliderControl(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::SliderControl)
+SliderControl::SliderControl(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::SliderControl)
+    , m_currentIndex(-1)
+    , m_currentLineWidth(0)
 {
     ui->setupUi(this);
     this->initValue();

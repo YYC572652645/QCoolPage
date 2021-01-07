@@ -9,6 +9,7 @@
 #include <QVector3D>
 #include <QDebug>
 #include "opengldef.h"
+#include <QtGlobal>
 
 OpenglControl::OpenglControl(QWidget *parent) :
     QOpenGLWidget(parent)
@@ -33,7 +34,8 @@ void OpenglControl::initializeGL()
 
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
-    for (int i = 0; i < 50; i++)
+    const int OBJECT_NUMBER = 35;
+    for (int i = 0; i < OBJECT_NUMBER; i++)
     {
         m_objectList.append(OBJECT_FACTORY->makeObject(ObjectFactory::OBJECT_CUBE));
     }
@@ -43,7 +45,11 @@ void OpenglControl::initializeGL()
     {
         m_objectList.at(i)->setWindowSize(width(), height());
         m_objectList.at(i)->setCameraLibrary(&m_cameraLibrary);
-        m_objectList.at(i)->setupShader(OpenglSpace::VERTEX_PATH, OpenglSpace::FRAMENT_PATH);
+#ifdef Q_OS_WIN
+        m_objectList.at(i)->setupShader(OpenglSpace::VERTEX_WIN_PATH, OpenglSpace::FRAMENT_WIN_PATH);
+#else
+        m_objectList.at(i)->setupShader(OpenglSpace::VERTEX_UNIX_PATH, OpenglSpace::FRAMENT_UNIX_PATH);
+#endif
         m_objectList.at(i)->setupPerspective(45.0f);
         m_objectList.at(i)->makeObject();
         m_objectList.at(i)->setOpenGLFunctions(this);

@@ -83,7 +83,7 @@
   <customwidget>
    <class>ProgressControl</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\progresscontrol\progresscontrol.h</header>
+   <header location="global">maincontent/controlwidget/progresscontrol/progresscontrol.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

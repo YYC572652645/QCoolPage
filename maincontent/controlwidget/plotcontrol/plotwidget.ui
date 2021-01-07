@@ -50,7 +50,7 @@
   <customwidget>
    <class>PlotControl</class>
    <extends>QWidget</extends>
-   <header>maincontent\controlwidget\plotcontrol\plotcontrol.h</header>
+   <header>maincontent/controlwidget/plotcontrol/plotcontrol.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -84,19 +84,19 @@
   <customwidget>
    <class>MainTitleBar</class>
    <extends>QWidget</extends>
-   <header location="global">titlebar\maintitlebar.h</header>
+   <header location="global">titlebar/maintitlebar.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>ControlTabWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controltabwidget.h</header>
+   <header location="global">maincontent/controltabwidget.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>ControlTreeWidget</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controltreewidget.h</header>
+   <header location="global">maincontent/controltreewidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

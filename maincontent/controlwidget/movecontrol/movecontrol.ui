@@ -68,14 +68,10 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: transparent;</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="../../../res.qrc">
-         <normaloff>:/res/res/image/other/close.png</normaloff>:/res/res/image/other/close.png</iconset>
        </property>
       </widget>
      </item>

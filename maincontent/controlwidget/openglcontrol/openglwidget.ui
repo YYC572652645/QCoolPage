@@ -38,7 +38,7 @@
   <customwidget>
    <class>OpenglControl</class>
    <extends>QOpenGLWidget</extends>
-   <header location="global">maincontent\controlwidget\openglcontrol\openglcontrol.h</header>
+   <header location="global">maincontent/controlwidget/openglcontrol/openglcontrol.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

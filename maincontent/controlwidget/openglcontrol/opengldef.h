@@ -7,8 +7,10 @@
 namespace OpenglSpace
 {
 const QColor CLEAR_COLOR = QColor(26, 26, 26);
-const QString VERTEX_PATH = ":/shader/vertex.glsl";
-const QString FRAMENT_PATH = ":/shader/frament.glsl";
+const QString VERTEX_WIN_PATH = ":/shader/vertex_windows.glsl";
+const QString FRAMENT_WIN_PATH = ":/shader/frament_windows.glsl";
+const QString VERTEX_UNIX_PATH = ":/shader/vertex_linux.glsl";
+const QString FRAMENT_UNIX_PATH = ":/shader/frament_linux.glsl";
 const QString CONTAINER_PATH = ":/texture/container.jpg";
 
 // 方向向量

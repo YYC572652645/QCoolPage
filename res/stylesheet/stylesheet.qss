@@ -3,7 +3,13 @@ QMainWindow
 {
 background-color:#1A1A1A;
 color:white;
+border:none;
 }
+QFrame#frameDot
+{
+border:none;
+}
+
 QFrame#frameBackground
 {
 background-color: #1A1A1A;
@@ -14,6 +20,7 @@ QFrame#frameBorder,#frameBackground
 {
 background-color:#1F1F1F;
 color:white;
+border:none;
 }
 
 QLabel
@@ -263,10 +270,18 @@ QTableWidget::item:selected
 {
 out-line:none;
 }
+/********************** NoveControl Style Sheet  *******************/
+QPushButton#pushButtonCloseControl
+{
+border:none;
+background:rgba(255, 255, 255, 0);
+image: url(:/res/res/image/other/close.png);
+}
 
 /********************** SliderWidget Style Sheet  *******************/
 QFrame#frameSlider
 {
+border:none;
 background-color:#1A1A1A;
 }
 

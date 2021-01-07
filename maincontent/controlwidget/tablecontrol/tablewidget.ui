@@ -68,7 +68,7 @@
   <customwidget>
    <class>TableControl</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\tablecontrol\tablecontrol.h</header>
+   <header location="global">maincontent/controlwidget/tablecontrol/tablecontrol.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

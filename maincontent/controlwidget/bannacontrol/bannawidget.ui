@@ -140,7 +140,7 @@
   <customwidget>
    <class>BannaControl</class>
    <extends>QWidget</extends>
-   <header location="global">maincontent\controlwidget\bannacontrol\bannacontrol.h</header>
+   <header location="global">maincontent/controlwidget/bannacontrol/bannacontrol.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
