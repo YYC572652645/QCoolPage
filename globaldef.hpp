@@ -10,22 +10,22 @@
     QFile file(qssFile);                        \
     file.open(QFile::ReadOnly);                 \
     if(file.isOpen())                           \
-{                                           \
-    qApp->setStyleSheet(file.readAll());    \
-    file.close();                           \
+    {                                           \
+        qApp->setStyleSheet(file.readAll());    \
+        file.close();                           \
     }                                           \
-    }
+}
 #endif
 
 #ifndef SAFEDELETE
 #define SAFEDELETE(pointer) \
 {                           \
     if(pointer)             \
-{                       \
-    delete pointer;     \
+    {                       \
+        delete pointer;     \
     }                       \
-    pointer = nullptr;          \
-    }
+    pointer = nullptr;      \
+}
 #endif
 
 enum WidgetTabType
