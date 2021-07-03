@@ -17,6 +17,11 @@
 ## CSDN网址： 
 https://blog.csdn.net/yinyuchen1/article/details/100639853
 
+## QCoolPage源码讲解视频
+请下载视频进行观看，百度云盘分享
+https://pan.baidu.com/s/1VFC329KHYaalYUw-p_4umA 
+提取码：wiqe 
+
 ## 项目简介
 作者:`灏夏星辰` 
 2021年01月07日
