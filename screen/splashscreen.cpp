@@ -5,6 +5,7 @@
  * ***************************************/
 #include "splashscreen.h"
 #include <QPainter>
+#include <QPainterPath>
 #include <QTimer>
 #include <QApplication>
 #include <QGuiApplication>
