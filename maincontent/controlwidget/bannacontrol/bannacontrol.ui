@@ -203,6 +203,9 @@ border-image: url(:/res/res/image/other/hover_blue.png);
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonFirst">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="minimumSize">
          <size>
           <width>16</width>
@@ -225,6 +228,9 @@ border-image: url(:/res/res/image/other/hover_blue.png);
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonSecond">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="minimumSize">
          <size>
           <width>16</width>
@@ -247,6 +253,9 @@ border-image: url(:/res/res/image/other/hover_blue.png);
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonThird">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="minimumSize">
          <size>
           <width>16</width>
@@ -272,6 +281,9 @@ border-image: url(:/res/res/image/other/hover_blue.png);
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonFourth">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="minimumSize">
          <size>
           <width>16</width>
@@ -294,6 +306,9 @@ border-image: url(:/res/res/image/other/hover_blue.png);
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonFifth">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="minimumSize">
          <size>
           <width>16</width>
