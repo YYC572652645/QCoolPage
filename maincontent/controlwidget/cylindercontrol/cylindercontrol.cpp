@@ -70,7 +70,7 @@ void CylinderControl::paintEvent(QPaintEvent *paintEvent)
     painter.drawLine(0, sliderHigh, sliderWidth, sliderHigh);
 
     // 画进度值
-    painter.drawText(sliderWidth - 40, sliderHigh - 10, QString("%%1").arg(sliderValue));
+    painter.drawText(sliderWidth - 40, sliderHigh - 10, QString("%1%").arg(sliderValue));
     painter.drawText(5, 30, sliderText);
 
 
