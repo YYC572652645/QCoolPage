@@ -3,6 +3,9 @@
 #include <QString>
 #include <QDebug>
 #include <QFile>
+#include <QImage>
+#include <QPoint>
+#include <QWidget>
 
 #ifndef LOADQSS
 #define LOADQSS(qssFile)                        \
